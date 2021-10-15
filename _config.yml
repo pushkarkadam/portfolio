@@ -22,6 +22,8 @@ defaults:
       values:
         layout: "default"
 
+baseurl: /portfolio
+
 plugins:
     - jekyll-feed
     - jekyll-sitemap
