@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="mt-2">
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/university/{{ page.image }}" alt="Image of {{ page.name }}" height="200px" width="200px">
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+            <h1>{{ page.university }}</h1>
+            <h2>{{ page.degree_title }}</h2>
+            <h6>{{ page.stream }}</h6>
+            <p>{{ page.start_date | date: "%Y" }} - {{ page.end_date | date: "%Y"}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="">
+    <p>{{ page.content }}</p>
+</div>

@@ -3,6 +3,8 @@ collections_dir: my_collections
 collections:
     jobs:
         output: true
+    degrees:
+        output: true
 
 defaults:
     - scope:
@@ -10,6 +12,11 @@ defaults:
         type: "jobs"
       values:
         layout: "job"
+    - scope:
+        path: ""
+        type: "degrees"
+      values:
+        layout: "degree"
     - scope:
         path: ""
       values:
