@@ -11,7 +11,3 @@ end_date: 2014-07-20
 * Scheduled the workshops for local students in Alexandria, Egypt.
 * Planned the activities included in the workshops.
 * Interacted with the local students to understand their needs in the workshop.
-
-# Work
-
-Meeting with the local students to conduct work experience.
