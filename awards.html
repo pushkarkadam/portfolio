@@ -1,0 +1,26 @@
+---
+layout: default
+title: Awards
+---
+
+<div class="mt-2">
+    <h1>Honours and Awards</h1>
+</div>
+
+<hr>
+
+<div class="mt-2">
+    {% assign awards = site.awards | sort: 'date' | reverse %}
+    <ul class="list-unstyled">
+        {% for award in awards %}
+            <li>
+                <div class="">
+                    <h3>{{ award.award_title }}</h3>
+                    <h6>{{ award.institute }} | {{ award.date | date: "%Y"}}</h6>
+                    <p>{{ award.excerpt | markdownify }}</p>
+                </div>
+                <hr>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

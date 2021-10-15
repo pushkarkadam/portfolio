@@ -5,6 +5,8 @@ collections:
         output: true
     degrees:
         output: true
+    awards:
+        output: true
 
 defaults:
     - scope:
