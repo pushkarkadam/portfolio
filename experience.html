@@ -10,12 +10,13 @@ title: Experience
 <hr>
 
 <div class="mt-2">
+    {% assign jobs = site.jobs | sort: 'start_date' | reverse %}
     <ul>
-        {% for job in site.jobs %}
+        {% for job in jobs %}
             <li>
                 <h2><a href="{{ job.url }}">{{ job.job_title }}</a></h2>
                 <h3>{{ job.name }}</h3>
-                <p>{{ job.content | markdownify }}</p>
+                <p>{{ job.excerpt | markdownify }}</p>
             </li>
         {% endfor %}
     </ul>

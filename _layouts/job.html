@@ -3,13 +3,16 @@ layout: default
 ---
 
 <div class="mt-2">
-    <img class="img-fluid" src="{{ site.baseurl }}/assets/images/jobs/{{ page.image }}" alt="Image of {{ page.name }}" height="100px" width="100px">
-</div>
-
-<div class="mt-2">
-    <h1>{{ page.job_title }}</h1>
-    <h2>{{ page.name }}</h2>
-    <p>{{ page.start }} - {{ page.end }}</p>
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/jobs/{{ page.image }}" alt="Image of {{ page.name }}" height="200px" width="200px">
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+            <h1>{{ page.job_title }}</h1>
+            <h2>{{ page.name }}</h2>
+            <p>{{ page.start_date | date: "%B %Y" }} - {{ page.end_date | date: "%B %Y"}}</p>
+        </div>
+    </div>
 </div>
 
 <div class="">

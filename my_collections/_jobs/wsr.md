@@ -4,8 +4,8 @@ job_title: Mechatronics Engineer
 name: Western Sydney Racing
 location: Sydney, Australia
 image: wsr.jpg
-start: June 2017
-end: January 2018
+start_date: 2017-06-01
+end_date: 2018-01-30
 ---
 
 * Created computer vision based software for lane detection for autonomous driving.
