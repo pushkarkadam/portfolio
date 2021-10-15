@@ -21,7 +21,7 @@ title: Experience
                     <div class="col-sm-11 col-md-11 col-lg-11">
                         <h2><a href="{{ site.baseurl }}{{ job.url }}">{{ job.job_title }}</a></h2>
                         <h4>{{ job.name }}</h4>
-                        <p>{{ job.start_date | date: "%B %Y" }} - {{ job.end_date | date: "%B %Y"}}</p>
+                        <p>{{ job.start_date | date: "%B %Y" }} - {% if job.end_date %}{{ job.end_date | date: "%B %Y"}}{% else %}Present{% endif %}</p>
                         <p>{{ job.excerpt | markdownify }}</p>
                     </div>
                 </div>
