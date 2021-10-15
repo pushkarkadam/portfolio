@@ -1,0 +1,21 @@
+collections_dir: my_collections
+
+collections:
+    jobs:
+        output: true
+
+defaults:
+    - scope:
+        path: ""
+        type: "jobs"
+      values:
+        layout: "job"
+    - scope:
+        path: ""
+      values:
+        layout: "default"
+
+plugins:
+    - jekyll-feed
+    - jekyll-sitemap
+    - jekyll-seo-tag
