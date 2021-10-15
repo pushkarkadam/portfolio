@@ -1,6 +1,6 @@
 ---
 short_name: wsu
-job_title: Gradute Intern
+job_title: Graduate Intern
 name: Western Sydney University, Engineering and Industrial Design
 location: Sydney, Australia
 image: wsu.jpg
