@@ -9,6 +9,8 @@ collections:
         output: true
     projects:
         output: true
+    certificates:
+        output: true
 
 defaults:
     - scope:
@@ -30,6 +32,11 @@ defaults:
         type: "posts"
       values:
         layout: "post"
+    - scope:
+        path: ""
+        type: "certificates"
+      values:
+        layout: "certificate"
 
 baseurl: /portfolio
 
