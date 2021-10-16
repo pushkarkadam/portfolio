@@ -1,0 +1,25 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="mt-2">
+    <h1>Latest Posts</h1>
+</div>
+<hr>
+
+<div class="mt-2">
+    {% assign posts = site.posts | sort: 'date' | reverse %}
+    <ul class="list-unstyled">
+        {% for post in posts %}
+            <li>
+                <div class="">
+                    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+                    <p>{{ post.date | date_to_string }}</p>
+                    <p>{{ post.excerpt | markdownify }}</p>
+                </div>
+                <hr>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
