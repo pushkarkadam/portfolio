@@ -23,7 +23,7 @@ end_date: 2019-05-05
 
 ---
 
-#### An Automatic Visual Ispection of a Car
+#### An Automatic Visual Inspection of a Car
 
 * Visual inspection of a car entering the garage
 * License plate recognition sub-system

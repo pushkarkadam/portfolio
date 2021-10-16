@@ -24,6 +24,7 @@ title: Education
                         <h6>{{ degree.stream }}</h6>
                         <p>{{ degree.start_date | date: "%Y" }} - {{ degree.end_date | date: "%Y"}}</p>
                         <p>{{ degree.excerpt | markdownify }}</p>
+                        <p><a href="{{ site.baseurl }}{{ degree.url }}">Read More</a></p>
                     </div>
                 </div>
                 <hr>
