@@ -1,6 +1,6 @@
 ---
 short_name: cs50w
-name: CS50W - CS50's Web Programming with Python and JavaScript
+name: "CS50W: CS50's Web Programming with Python and JavaScript"
 institute: edX
 university: Harvard University
 date: 2021-09-24
