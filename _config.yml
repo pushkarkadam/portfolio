@@ -39,6 +39,7 @@ defaults:
         layout: "certificate"
 
 baseurl: /portfolio
+url: "https://pushkarkadam.github.io"
 
 plugins:
     - jekyll-feed
