@@ -1,0 +1,28 @@
+---
+layout: default
+title: Certificates
+---
+
+<div class="mt-2">
+    <h1>Certificates</h1>
+</div>
+<hr>
+
+<div class="row">
+    {% assign certificates = site.certificates | sort: 'date' | reverse %}
+    {% for certificate in certificates %}
+        <div class="col-sm-4 col-md-4 col-lg-4 d-flex align-items-stretch mt-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ site.baseurl }}/assets/images/certificates/{{ certificate.image }}" alt="Image of {{ certificate.short_name }}">
+                <div class="card-body">
+                    <span class="badge badge-pill badge-light mb-1">{{ certificate.date | date: "%b %Y" }}</span>
+                    <hr>
+                    <h5 class="card-title">{{ certificate.name }}</h5>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <a href="{{ site.baseurl }}{{ certificate.url }}" class="btn btn-primary mt-auto">Read More</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

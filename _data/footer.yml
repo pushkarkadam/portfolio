@@ -1,0 +1,9 @@
+- name: GitHub
+  icon: <i class="bi bi-github"></i>
+  link: https://github.com/pushkarkadam
+- name: LinkedIn
+  icon: <i class="bi bi-linkedin"></i>
+  link: https://www.linkedin.com/in/pushkar-kadam-9aa510138/
+- name: Mail
+  icon: <i class="bi bi-envelope-fill"></i>
+  link: mailto:pushkarkadam17@outlook.com
