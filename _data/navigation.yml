@@ -1,0 +1,14 @@
+- name: Home
+  link: /
+- name: Experience
+  link: /experience.html
+- name: Education
+  link: /education.html
+- name: Certificates
+  link: /certificates.html
+- name: Projects
+  link: /projects.html
+- name: Awards
+  link: /awards.html
+- name: Blog
+  link: /blog.html 

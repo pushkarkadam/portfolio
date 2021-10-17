@@ -1,0 +1,33 @@
+---
+layout: default
+title: Experience
+---
+
+<div class="mt-2">
+    <h1>Work Experience</h1>
+</div>
+
+<hr>
+
+<div class="mt-2">
+    {% assign jobs = site.jobs | sort: 'start_date' | reverse %}
+    <ul class="list-unstyled">
+        {% for job in jobs %}
+            <li>
+                <div class="row">
+                    <div class="col-sm-1 col-md-1 col-lg-1">
+                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/jobs/{{ job.image }}" alt="{{ job.image }}" height="100px" width="100px">
+                    </div>
+                    <div class="col-sm-11 col-md-11 col-lg-11">
+                        <h2><a href="{{ site.baseurl }}{{ job.url }}">{{ job.job_title }}</a></h2>
+                        <h4>{{ job.name }}</h4>
+                        <p>{{ job.start_date | date: "%B %Y" }} - {% if job.end_date %}{{ job.end_date | date: "%B %Y"}}{% else %}Present{% endif %}</p>
+                        <p>{{ job.excerpt | markdownify }}</p>
+                        <p><a href="{{ site.baseurl }}{{ job.url }}">Read More</a></p>
+                    </div>
+                </div>
+                <hr>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

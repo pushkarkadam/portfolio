@@ -1,0 +1,46 @@
+collections_dir: my_collections
+
+collections:
+    jobs:
+        output: true
+    degrees:
+        output: true
+    awards:
+        output: true
+    projects:
+        output: true
+    certificates:
+        output: true
+
+defaults:
+    - scope:
+        path: ""
+        type: "jobs"
+      values:
+        layout: "job"
+    - scope:
+        path: ""
+        type: "degrees"
+      values:
+        layout: "degree"
+    - scope:
+        path: ""
+      values:
+        layout: "default"
+    - scope:
+        path: ""
+        type: "posts"
+      values:
+        layout: "post"
+    - scope:
+        path: ""
+        type: "certificates"
+      values:
+        layout: "certificate"
+
+baseurl: /portfolio
+
+plugins:
+    - jekyll-feed
+    - jekyll-sitemap
+    - jekyll-seo-tag
