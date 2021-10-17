@@ -16,10 +16,8 @@ title: Certificates
                 <img class="card-img-top" src="{{ site.baseurl }}/assets/images/certificates/{{ certificate.image }}" alt="Image of {{ certificate.short_name }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ certificate.name }}</h5>
-                    <div class="d-flex flex-column mt-auto">
-                        <hr>
-                        <p class="card-text text-center">Issued {{ certificate.date | date: "%B %Y" }}</p>
-                    </div>
+                    <hr>
+                    <p class="card-text text-center">Issued {{ certificate.date | date: "%B %Y" }}</p>
                 </div>
                 <div class="card-body d-flex flex-column">
                     <a href="{{ site.baseurl }}{{ certificate.url }}" class="btn btn-primary mt-auto">Read More</a>
