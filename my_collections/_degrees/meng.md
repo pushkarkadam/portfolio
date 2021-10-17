@@ -36,6 +36,6 @@ end_date: 2019-05-05
 
 ## Achievements
 ---
-
+* Dean's Medal
 * Dean's Merit List 2018
 * Dean's Merit List 2017
