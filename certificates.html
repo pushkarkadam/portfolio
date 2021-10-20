@@ -11,7 +11,7 @@ title: Certificates
 <div class="row">
     {% assign certificates = site.certificates | sort: 'date' | reverse %}
     {% for certificate in certificates %}
-        <div class="col-sm-4 col-md-4 col-lg-4 d-flex align-items-stretch mt-4">
+        <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch mt-4">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{ site.baseurl }}/assets/images/certificates/{{ certificate.image }}" alt="Image of {{ certificate.short_name }}">
                 <div class="card-body">
