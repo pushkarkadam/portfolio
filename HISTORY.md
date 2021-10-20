@@ -1,3 +1,12 @@
+# v1.0.2 (2021-10-20)
+
+* Fixed font size on mobile device.
+* Fixed certificate layouts when viewed on small screen sizes.
+
+# v1.0.1 (2021-10-17)
+
+* Fixed deployment issue.
+
 # v1.0.0 (2021-10-17)
 
 * Home page created with navbar, footer, introductory text, and a quote.
