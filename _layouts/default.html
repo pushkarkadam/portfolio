@@ -15,10 +15,14 @@
         {% seo %}
     </head>
     <body>
-        {% include navigation.html %}
-        <div class="container mb-5 pb-5">
+        <div class="mb-2">
+            {% include navigation.html %}
+        </div>
+        <div class="container mb-5 pb-5 pt-5">
             {{ content }}
         </div>
-        {% include footer.html %}
+        <div class="">
+            {% include footer.html %}
+        </div>
     </body>
 </html>
