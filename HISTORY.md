@@ -1,3 +1,11 @@
+# v1.1.0 (2021-10-29)
+
+* Navbar fixed on top while scrolling.
+* Aligned certificates in the center to fix viewing on mobile device.
+* Reading progress bar added on top of the blog post to indicate the reading progress as per the page scroll.
+* Maths equation capability added.
+* LaTeX maths equation from markdown files rendered on web pages.
+
 # v1.0.2 (2021-10-20)
 
 * Fixed font size on mobile device.

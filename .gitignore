@@ -2,3 +2,6 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Files to ignore
+my_collections/_posts/2021-10-29-maths-trial.md
