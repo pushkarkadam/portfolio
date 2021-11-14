@@ -14,8 +14,8 @@ title: Blog
         {% for post in posts %}
             <li>
                 <div class="">
-                    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-                    <p>{{ post.date | date: "%-d %B %Y" }}</p>
+                    <h2 class="page-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+                    <p class="blog-meta">{{ post.date | date: "%-d %B %Y" }}</p>
                     <p>{{ post.excerpt | markdownify }}</p>
                     <p><a href="{{ site.baseurl }}{{ post.url }}">Read More</a></p>
                 </div>

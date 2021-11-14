@@ -4,6 +4,8 @@
 * Fixed the gap between navbar and progress bar in blog.
 * Increased the gap between blog cover image and content.
 * Changed date format in blog page and blog list.
+* Page title links are not highlighted unless hovered.
+* Font changed for date on blog.
 
 # v1.1.0 (2021-10-29)
 
