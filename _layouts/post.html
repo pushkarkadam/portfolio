@@ -9,7 +9,7 @@ layout: default
 <div class="page-header">
     <h1>{{ page.title }}</h1>
     {% if page.date %}
-        <p>{{ page.date | date_to_string }}</p>
+        <p>{{ page.date | date: "%-d %B %Y" }}</p>
     {% endif %}
 </div>
 {% if page.cover_image %}
@@ -17,7 +17,7 @@ layout: default
         <img class="img-fluid" src="{{ site.baseurl }}/assets/images/blogs/{{ page.cover_image }}" alt="">
     </div>
 {% endif %}
-<div class="mt-2">
+<div class="mt-5">
     {{ content }}
 </div>
 
