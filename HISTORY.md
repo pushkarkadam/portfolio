@@ -1,6 +1,7 @@
 # v1.1.1 (2021-11-14)
 
 * Fixed navbar overlapping title and back button.
+* Fixed the gap between navbar and progress bar in blog.
 
 # v1.1.0 (2021-10-29)
 
