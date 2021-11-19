@@ -11,7 +11,9 @@ layout: default
     {% if page.date %}
         <p class="blog-meta">
             {{ page.date | date: "%-d %B %Y" }}
-            --
+            | <i class="bi bi-clock"></i>
+            <span id="read-time"></span>
+            | <i class="bi bi-tag"></i>
             {% for category in page.categories %}
                 <a href="#" class="badge badge-light blog-meta">{{ category }}</a>
             {% endfor %}
