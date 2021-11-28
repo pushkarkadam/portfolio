@@ -1,3 +1,14 @@
+# v1.2.0 (2021-11-28)
+
+* Read time added to the blog post.
+* Category list added on the blog post page.
+* Organised read time, categories and date on the same line.
+* Blog category links added to the category tag on the blog post page.
+* Blog posts are sorted by categories on categories page.
+* Categories visible on the list of blog posts.
+* Navigation to blog categories via category badges added on the blog list.
+* Category collections added.
+
 # v1.1.1 (2021-11-14)
 
 * Fixed navbar overlapping title and back button.
