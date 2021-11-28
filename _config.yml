@@ -11,6 +11,8 @@ collections:
         output: true
     certificates:
         output: true
+    categories:
+        output: true
 
 defaults:
     - scope:
@@ -37,6 +39,11 @@ defaults:
         type: "certificates"
       values:
         layout: "certificate"
+    - scope:
+        path: ""
+        type: "categories"
+      values:
+        layout: "category"
 
 baseurl: /portfolio
 url: "https://pushkarkadam.github.io"
