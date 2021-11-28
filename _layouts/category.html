@@ -19,7 +19,7 @@ layout: default
                             {{ post.date | date: "%-d %B %Y" }} |
                             <i class="bi bi-tag"></i>
                             {% for category in post.categories %}
-                                <span class="badge badge-secondary">{{ category }}</span>
+                                <span class="badge badge-success">{{ category }}</span>
                             {% endfor %}
                         </p>
                         <p>{{ post.excerpt | markdownify }}</p>

@@ -19,7 +19,7 @@ layout: default
         {% for cat in page.categories %}
             {% for category in categories %}
                 {% if category.category_name == cat %}
-                    <a href="{{ site.baseurl }}{{ category.url }}" class="badge badge-light blog-meta">{{ category.category_name }}</a>
+                    <a href="{{ site.baseurl }}{{ category.url }}" class="badge badge-success blog-meta">{{ category.category_name }}</a>
                     {% break %}
                 {% endif %}
             {% endfor %}

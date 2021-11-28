@@ -15,7 +15,13 @@ title: Blog
             <li>
                 <div class="">
                     <h2 class="page-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-                    <p class="blog-meta">{{ post.date | date: "%-d %B %Y" }}</p>
+                    <p class="blog-meta">
+                        {{ post.date | date: "%-d %B %Y" }} |
+                        <i class="bi bi-tag"></i>
+                        {% for category in post.categories %}
+                            <span class="badge badge-success">{{ category }}</span>
+                        {% endfor %}
+                    </p>
                     <p>{{ post.excerpt | markdownify }}</p>
                     <p><a href="{{ site.baseurl }}{{ post.url }}">Read More</a></p>
                 </div>
