@@ -1,3 +1,8 @@
+# v1.2.1 (2021-11-29)
+
+* Fixed the metadata alignment on the blog post on different devices.
+* Fixed the metadata of blog on blog list on both latest post and category blog list.
+
 # v1.2.0 (2021-11-28)
 
 * Read time added to the blog post.
