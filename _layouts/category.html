@@ -15,18 +15,21 @@ layout: default
                 <li>
                     <div class="">
                         <h2 class="page-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-                        <p class="blog-meta">
-                            {{ post.date | date: "%-d %B %Y" }} |
-                            <i class="bi bi-tag"></i>
-                            {% assign categories = site.categories | sort %}
-                            {% for cat in post.categories %}
-                                {% for category in categories %}
-                                    {% if category.category_name == cat %}
-                                        <a href="{{ site.baseurl }}{{ category.url }}" class="badge badge-success">{{ category.category_name }}</a>
-                                    {% endif %}
+                        <div class="blog-meta">
+                            <div class="">
+                                {{ post.date | date: "%-d %B %Y" }}
+                            </div>
+                            <div class="">
+                                {% assign categories = site.categories | sort %}
+                                {% for cat in post.categories %}
+                                    {% for category in categories %}
+                                        {% if category.category_name == cat %}
+                                            <a href="{{ site.baseurl }}{{ category.url }}" class="badge badge-success">{{ category.category_name }}</a>
+                                        {% endif %}
+                                    {% endfor %}
                                 {% endfor %}
-                            {% endfor %}
-                        </p>
+                            </div>
+                        </div>
                         <p>{{ post.excerpt | markdownify }}</p>
                         <p><a href="{{ site.baseurl }}{{ post.url }}">Read More</a></p>
                     </div>
