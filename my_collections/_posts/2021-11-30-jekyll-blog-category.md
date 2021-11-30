@@ -159,7 +159,7 @@ layout: default
         {% for post in posts %}
             {% if post.categories contains page.category_name %}
                 <li>
-                    <div class="">
+                    <div>
                         <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
                         <div>
                             <div>
