@@ -6,7 +6,7 @@ categories: [coding, jekyll]
 cover_image: 2021-11-30-cover.jpg
 ---
 
-As the number of my blog posts increases, I need to categorise them. I wanted a category badge on every blog post, and when the users click on a category badge, they can see a page with the collection of blogs belonging to that category. This blog post highlights the steps I took to categorise blog posts.
+Categorising blog posts is essential if you want your readers to read similar posts that they liked. While there are some limitations when implementing categorisation in Jekyll, but it is far from impossible. This blog highlights the steps I took to categorise blog posts.
 
 ## Problem statement
 ---
@@ -18,7 +18,7 @@ To save some time for the readers, let me state what problem I am going to addre
 ## Blog posts
 ---
 
-When you create a blog post, make sure to include `categories` in your front matter. Should you choose to create multiple categories, you can create an array such as `[category0, category1, category2]`. Create blog posts inside the `_posts` folder. Your posts will look as follows:
+When you create a blog post, make sure to include `categories` variable in your [front matter](https://jekyllrb.com/docs/step-by-step/03-front-matter/){:target="_blank"}. Should you choose to create multiple categories, you can create an array such as `[category0, category1, category2]`. Create blog posts inside the `_posts` folder. Your posts will look as follows:
 
 #### Post 0
 {% highlight markdown linenos %}
@@ -58,10 +58,16 @@ categories: [coding]
 Contents of blog 2.
 {% endhighlight %}
 
+**Note**: As per Jekyll convention, you must name your blog post markdown file with the format `year-month-day-name-of-your-blog-post.md`.  Example: For blog0 published on 2020-10-06, the file name must be `2020-10-06-blog0.md`.
+
+For more information on Jekyll blogs, follow the Jekyll step by step tutorials on [blogging](https://jekyllrb.com/docs/step-by-step/08-blogging/){:target="_blank"}.
+
+
+
 ## Categories collection
 ---
 
-Create a collection of categories. For every category you add to your blog post, there must be a markdown file for that category with some front matter. **Example**: If you include `coding` category in your blog post as above, you must create a file `coding.md` inside `_categories` collection folder. We use the variable `category_name` in the front matter to link the category to the blog post.
+Create a collection of categories. For every category you add to your blog post, there must be a markdown file for that category with [front matter](https://jekyllrb.com/docs/step-by-step/03-front-matter/){:target="_blank"} consisting of a variable `category_name`. **Example**: If you include `coding` category in your blog post as above, you must create a file `coding.md` inside `_categories` collection folder and add `category_name: coding` to the front matter.
 
 Your categories collections folder may look as follows:
 
@@ -86,10 +92,12 @@ category_name: jekyll
 ---
 {% endhighlight %}
 
+For more information on collections, refer to Jekyll step by step tutorials on [collections](https://jekyllrb.com/docs/step-by-step/09-collections/){:target="_blank"}.
+
 ## Config file
 ---
 
-Since we are storing the blog categories as a collection, we must change the `config.yml` file. Add the following code to your `config.yml` file.
+Since we are storing the blog categories as a collection, we must change the `_config.yml` file. Add the following code to your `_config.yml` file.
 
 {% highlight yml linenos %}
 collections:
@@ -105,10 +113,12 @@ defaults:
 
 {% endhighlight %}
 
+Read more about setting up the `_config.yml` file in Jekyll by following step by step tutorials on [collections](https://jekyllrb.com/docs/step-by-step/09-collections/){:target="_blank"}.
+
 ## Category list on blog post
 ---
 
-You can create a `post.html` file inside your `_layouts`.  The `post.html` file will display your blog's content and the category links, redirecting the user to the categories page.
+You can create a `post.html` file inside your `_layouts`.  The `post.html` file will display your blog's content and the category links, redirecting the user to the respective category page.
 
 {% highlight html linenos %}
 {% raw %}
@@ -184,12 +194,14 @@ layout: default
 {% endraw %}
 {% endhighlight %}
 
+For more information on layouts, refer to Jekyll step by step tutorials on [layouts](https://jekyllrb.com/docs/step-by-step/04-layouts/){:target="_blank"}.
+
 ## Summary
 ---
 
 * Create an array called `categories` in the front matter of a blog post.
 * Create a collection of categories by creating a markdown inside `_categories` collection folder.
-* Update the `config.yml` file for categories collection and the category page.
+* Update the `_config.yml` file for categories collection and the category page.
 * Add the list of categories to the blog post layout.
 * Create a `category.html` file inside `_layouts` folder to see a list of all the blog posts for that category.
 
