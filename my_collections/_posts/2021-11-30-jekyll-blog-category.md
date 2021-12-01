@@ -14,6 +14,7 @@ Categorising blog posts is essential if you want your readers to read similar po
 To save some time for the readers, let me state what problem I am going to address. The problem statement is as follows:
 
 > The blog post has a list of categories. The reader can click on a category link, and the link will redirect the user to a page that lists all the blog posts belonging to that category.
+{:class="blog-blockquote"}
 
 ## Blog posts
 ---
