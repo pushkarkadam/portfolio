@@ -1,3 +1,9 @@
+# v1.2.2 (2021-12-11)
+
+* Fixed SEO for the website.
+* Changed title of the index page.
+* Added Author to the front matter of blog post.
+
 # v1.2.1 (2021-11-29)
 
 * Fixed the metadata alignment on the blog post on different devices.
