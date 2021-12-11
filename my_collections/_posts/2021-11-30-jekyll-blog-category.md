@@ -4,6 +4,7 @@ title: "Categorise Jekyll blog posts"
 date: 2021-11-30 10:00:00 +1100
 categories: [coding, jekyll]
 cover_image: 2021-11-30-cover.jpg
+author: Pushkar Kadam
 ---
 
 Categorising blog posts is essential if you want your readers to read similar posts that they liked. While there are some limitations when implementing categorisation in Jekyll, but it is far from impossible. This blog highlights the steps I took to categorise blog posts.
