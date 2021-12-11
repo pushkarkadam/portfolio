@@ -4,6 +4,7 @@ title:  "Autodirs v1.1.0 updates"
 date:   2021-11-15 18:00:00 +1100
 categories: [coding, opensource]
 cover_image: 2021-11-15-cover.jpg
+author: Pushkar Kadam
 ---
 
 The power of open-source is in contribution. This contribution not only requires coding but also requires requesting something out of the project. One such feature request from a fellow member of the open-source community led to a fantastic coding adventure for the past few months.
