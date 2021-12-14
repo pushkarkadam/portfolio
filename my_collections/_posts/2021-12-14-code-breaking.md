@@ -166,7 +166,9 @@ plt.bar(list(fr1.keys()), list(fr1.values()), align='center')
 
 The frequency graph of message #1 is similar to the frequency graph of any passage in the English language. In other words, in every passage in the English language, certain letters appear in large numbers than the others.
 
-![English frequency](/portfolio/assets/images/blogs/cryptography/english_freq.png){:class="img-fluid"}
+![English frequency](/portfolio/assets/images/blogs/cryptography/english_freq.png){:class="img-fluid"}**Fig 2**: Frequency distribution of letters in the English language
+
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/english_freq.png" description="<strong>Fig 2</strong>: Frequency distribution of letters in the English language" %}
 
 
 We can see that the letter `l` has the highest frequency of occurrence. When we compare the frequency distribution graph of message #1 and the English language, `l` and `e` have the largest peaks. Letter `l` is seven spaces away from `e`. So, the key must be seven. This encryption is an example of Caesar Cypher, where the messages are encrypted and decrypted using forward and backward shifts, respectively. The following example shows how we encrypt a message by shifting every letter by two spaces to get the encrypted message.
