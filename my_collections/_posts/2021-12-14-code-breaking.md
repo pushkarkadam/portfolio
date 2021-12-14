@@ -21,6 +21,14 @@ Following this, there are going to be spoilers to the puzzles. So, if you want t
 The contents from the bag thrown out of the car were mysterious. There were blueprints, a circuit diagram, a newspaper clipping, a business card with a hand-written 250 number.
 
 [Images]
+![](assets/images/blogs/cryptography/discovery0.jpg)
+<table>
+    <tr>
+        <td><img src="/../../assets/images/blogs/cryptography/discovery0.jpg"  alt="1" width = 360px height = 640px ></td>
+        <td><img src="/../../assets/images/blogs/cryptography/discovery1.jpg" alt="2" width = 360px height = 640px></td>
+    </tr>
+</table>
+![](../../assets/images/blogs/cryptography/discovery0.jpg)| [](../../assets/images/blogs/cryptography/discovery0.jpg)
 
 But, one item stood out among the rest. It seemed like a secret code.
 
