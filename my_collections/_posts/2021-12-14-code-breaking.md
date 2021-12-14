@@ -99,7 +99,9 @@ cnuetzywfn
 
 Codebreakers often look for a leak of information. Information leaks can take place in several ways. One way to observe information leak in shifting characters is to observe the frequency of letters, i.e. counting how many times a letter appears in the message.
 
-In the English language, every paragraph has a frequency of letters used. This frequency chart, shown below, acts as a fingerprint. For example, the letter 'e' has the highest frequency. So, when we see an encrypted message, we must find a letter with the highest frequency. The letter with the highest frequency in the encrypted message often corresponds to 'e'. Let us put this theory into practice using the python programming language.
+In the English language, every paragraph has a frequency of letters used. This frequency chart, shown in *Fig. 1*, acts as a fingerprint. For example, the letter `e` has the highest frequency. So, when we see an encrypted message, we must find a letter with the highest frequency. The letter with the highest frequency in the encrypted message often corresponds to `e`. Let us put this theory into practice using the python programming language.
+
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/english_freq.png" description="<strong>Fig. 1</strong>. Frequency distribution of letters in the English language" %}
 
 > You may want to use python packages such as Matplotlib and Jupyter Notebook to make coding easier for you.
 {:class="alert alert-info"}
@@ -161,17 +163,10 @@ plt.ylabel("Number of occurrence")
 plt.bar(list(fr1.keys()), list(fr1.values()), align='center')
 {% endhighlight %}
 
-
-![message1 frequency analysis](/portfolio/assets/images/blogs/cryptography/message1_freq.png){:class="img-fluid"}
-
-The frequency graph of message #1 is similar to the frequency graph of any passage in the English language. In other words, in every passage in the English language, certain letters appear in large numbers than the others.
-
-![English frequency](/portfolio/assets/images/blogs/cryptography/english_freq.png){:class="img-fluid"}**Fig 2**: Frequency distribution of letters in the English language
-
-{% include image.html url="/portfolio/assets/images/blogs/cryptography/english_freq.png" description="<strong>Fig 2</strong>: Frequency distribution of letters in the English language" %}
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/message1_freq.png" description="<strong>Fig. 2</strong>. Frequency distribution of letters in message 1" %}
 
 
-We can see that the letter `l` has the highest frequency of occurrence. When we compare the frequency distribution graph of message #1 and the English language, `l` and `e` have the largest peaks. Letter `l` is seven spaces away from `e`. So, the key must be seven. This encryption is an example of Caesar Cypher, where the messages are encrypted and decrypted using forward and backward shifts, respectively. The following example shows how we encrypt a message by shifting every letter by two spaces to get the encrypted message.
+The frequency graph of message #1, shown in *Fig. 2*, is similar to the frequency graph of any passage in the English language, shown in *Fig. 1*. We can see that the letter `l` has the highest frequency of occurrence. When we compare the *Fig.1* and *Fig. 2*, `l` and `e` have the largest peaks. Letter `l` is seven spaces away from `e`. So, the key must be seven. This encryption is an example of Caesar Cypher, where the messages are encrypted and decrypted using forward and backward shifts, respectively. The following example shows how we encrypt a message by shifting every letter by two spaces to get the encrypted message.
 ```
 # Using caesar cypher
 
@@ -182,18 +177,83 @@ e: ecnn ujgtnqem
 
 We can either try using `key = 7` or try a brute force approach. In the brute force approach, we try every possible key from 0 to 25 to check for a message that makes sense. You may have a question regarding why go through all the trouble to do frequency analysis? The answer is that we may not be sure whether the encryption was done using Caesar Cypher. Frequency analysis tells us the type of encryption used.
 
-[Insert code]
+First, we define a decrypting function as follows:
+
+{% highlight python linenos %}
+def decrypt_caesar(message, key):
+    """Takes an encrypted message and the key and returns a decrypted message"""
+    deciphered = ""
+    for c in message:
+        deciphered += chr((ord(c) - ord('a') - key) % 26 + ord('a'))
+
+    return deciphered
+{% endhighlight %}
+
+Then, we execute the function by using the following code:
+
+{% highlight python %}
+print(decrypt_caesar(message1, 7))
+{% endhighlight %}
+
+We get the following output:
+
+{% highlight python %}
+zenameblackoutworriedhtatouqcipheristooweakonnextmessageswitchtovigenerecipherkeywordisthetiddensyybolofdeathinmyfavuriteholbeinend
+{% endhighlight %}
 
 Finally, we have decrypted the first message. It is as follows:
 
-[Insert decrypted message]
+```
+ze name blackout worried htat
+ouq cipher is too weak
+on next message
+switch to vigenere cipher
+keyword is the tidden syybol of death
+in my favurite holbein end
+```
 
 #### Message 2
 
-Similar to message 1, we must also try
-[Insert frequency analysis]
+Similar to message 1, we must also try frequency analysis on message 2.
 
-[Insert code]
+We can use the following code to get the frequency distribution of message 2.
+
+{% highlight python linenos %}
+message2 = "vwduwljudeehghyhubwklqjlfrxogilqgsohdvhuhwxuqdqbeoxhsuqwvieuydxowdqgodupghvljqedvhgrqzkifkedqnbrxghflghrqldpvhwwlqjxsvdihkrxvhfr"
+
+freq2 = char_frequency(message2)
+fr2 = sort_freq_plot(freq2)
+
+plt.figure(figsize=(16,6), dpi=80)
+plt.grid()
+plt.title("Frequency distribution of message 2")
+plt.xlabel("Letters")
+plt.ylabel("Number of occurrence")
+plt.bar(list(fr2.keys()), list(fr2.values()), align='center')
+{% endhighlight %}
+
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/message2_freq.png" description="<strong>Fig. 3</strong>. Frequency distribution of letters in message 2" %}
+
+*Fig. 3* shows the frequency distribution of message 2. In Fig. 3, `h` has the highest peak. Therefore, the key must be `3`. We can use the following code to decrypt message 2.
+
+{% highlight python %}
+print(decrypt_caesar(message2, 3))
+{% endhighlight %}
+
+We get the following output:
+
+{% highlight python %}
+startigrabbedeverythingicouldfindpleasereturnanyblueprntsfbrvaultandlarmdesignbasedonwhfchbankyoudecideoniamsettingupsafehouseco
+{% endhighlight %}
+
+Now, we have the decrypted second message as follows:
+
+```
+start i grabbed everything i could find
+please return any blueprnts fbr vault and larm
+design based on whfch bank you decide on
+i am setting up safe house co
+```
 
 ## Chapter 3: Holbein
 ---
