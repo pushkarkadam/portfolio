@@ -13,8 +13,8 @@ Mysteries are always intriguing. So, I was thrilled when I found a 'stop a bank 
 
 
 **<i class="bi bi-exclamation-triangle-fill"></i> Spoiler Alert!**
-Following this, there are going to be spoilers to the puzzles. So, if you want to solve this on your own, I highly recommend you to go to [Khan Academy](https://www.khanacademy.org/computing/computer-science/cryptography/cryptochallenge/a/cryptochallenge-introduction){:class="alert-link"} to solve this puzzle. But, if you want to read a mystery blog, please read ahead, but at your own risk!
-{:class="alert alert-warning"}
+Following this, there are going to be spoilers to the puzzles. So, if you want to solve this on your own, I highly recommend you to go to [Khan Academy](https://www.khanacademy.org/computing/computer-science/cryptography/cryptochallenge/a/cryptochallenge-introduction){:class="alert-link"}{:target="_blank"} to solve these puzzles. But, if you want to read a mystery blog and find out how to do cryptanalysis, please read ahead.
+{:class="alert alert-danger"}
 
 ## Chapter 1: The discovery
 ---
@@ -55,7 +55,7 @@ When I entered the room, I saw a wastebasket with some papers. Luckily, I found 
 
 ![message 1 and 2](/portfolio/assets/images/blogs/cryptography/message1_2.jpg){:class="img-fluid"}
 
-The messages are as follows:
+Transcripts of the above messages:
 
 **Message 1**:
 
@@ -95,11 +95,11 @@ xpddsyoehxpceswtoxwbleecsax
 cnuetzywfn
 ```
 
-### Breaking the code
+### Cracking the code
 
 Codebreakers often look for a leak of information. Information leaks can take place in several ways. One way to observe information leak in shifting characters is to observe the frequency of letters, i.e. counting how many times a letter appears in the message.
 
-In the English language, every paragraph has a frequency of letters used. This frequency chart, shown in *Fig. 1*, acts as a fingerprint. For example, the letter `e` has the highest frequency. So, when we see an encrypted message, we must find a letter with the highest frequency. The letter with the highest frequency in the encrypted message often corresponds to `e`. Let us put this theory into practice using the python programming language.
+In the English language, every paragraph has a frequency of letters used. This frequency chart, shown in *Fig. 1*, acts as a fingerprint. The letter `e` has the highest frequency. So, when we see an encrypted message, we must find a letter with the highest frequency. The letter with the highest frequency in the encrypted message often corresponds to `e`. Let us put this theory into practice using the python programming language.
 
 {% include image.html url="/portfolio/assets/images/blogs/cryptography/english_freq.png" description="<strong>Fig. 1</strong>. Frequency distribution of letters in the English language" %}
 
@@ -148,9 +148,10 @@ def sort_freq_plot(frequency):
 Now, we must plot the frequency graph of the message that will help us find the type of cypher used.
 
 {% highlight python linenos %}
-# message
+# message 1
 message1 = "gluhtlishjrvbadvyyplkoahavbxjpwolypzavvdlhrvuuleatlzzhnlzdpajoavcpnlulyljpwolyrlfdvykpzaolapkkluzffivsvmklhaoputfmhcbypalovsilpuluk"
 
+# Get frequency of letters in the message
 freq1 = char_frequency(message1)
 fr1 = sort_freq_plot(freq1)
 
@@ -166,7 +167,7 @@ plt.bar(list(fr1.keys()), list(fr1.values()), align='center')
 {% include image.html url="/portfolio/assets/images/blogs/cryptography/message1_freq.png" description="<strong>Fig. 2</strong>. Frequency distribution of letters in message 1" %}
 
 
-The frequency graph of message #1, shown in *Fig. 2*, is similar to the frequency graph of any passage in the English language, shown in *Fig. 1*. We can see that the letter `l` has the highest frequency of occurrence. When we compare the *Fig.1* and *Fig. 2*, `l` and `e` have the largest peaks. Letter `l` is seven spaces away from `e`. So, the key must be seven. This encryption is an example of Caesar Cypher, where the messages are encrypted and decrypted using forward and backward shifts, respectively. The following example shows how we encrypt a message by shifting every letter by two spaces to get the encrypted message.
+The frequency graph of message 1, shown in *Fig. 2*, is similar to the frequency graph of any passage in the English language, shown in *Fig. 1*. We can see that the letter `l` has the highest frequency of occurrence. When we compare the *Fig.1* and *Fig. 2*, `l` and `e` have the largest peaks. Letter `l` is seven spaces away from `e`. So, the key must be `7`. This encryption is an example of Caesar Cypher, where the messages are encrypted and decrypted using forward and backward shifts, respectively. The following example shows how we encrypt a message by shifting every letter by two spaces to get the encrypted message.
 ```
 # Using caesar cypher
 
@@ -201,7 +202,7 @@ We get the following output:
 zenameblackoutworriedhtatouqcipheristooweakonnextmessageswitchtovigenerecipherkeywordisthetiddensyybolofdeathinmyfavuriteholbeinend
 {% endhighlight %}
 
-Finally, we have decrypted the first message. It is as follows:
+Reorganising the output, we get the first decrypted message. Message 1 is as follows:
 
 ```
 ze name blackout worried htat
@@ -214,16 +215,17 @@ in my favurite holbein end
 
 #### Message 2
 
-Similar to message 1, we must also try frequency analysis on message 2.
-
-We can use the following code to get the frequency distribution of message 2.
+Similar to message 1, we must also try frequency analysis on message 2. We can use the following code to get the frequency distribution of message 2.
 
 {% highlight python linenos %}
+# message 2
 message2 = "vwduwljudeehghyhubwklqjlfrxogilqgsohdvhuhwxuqdqbeoxhsuqwvieuydxowdqgodupghvljqedvhgrqzkifkedqnbrxghflghrqldpvhwwlqjxsvdihkrxvhfr"
 
+# Get frequency of letters in the message
 freq2 = char_frequency(message2)
 fr2 = sort_freq_plot(freq2)
 
+# Plot frequency distribution
 plt.figure(figsize=(16,6), dpi=80)
 plt.grid()
 plt.title("Frequency distribution of message 2")
@@ -234,7 +236,7 @@ plt.bar(list(fr2.keys()), list(fr2.values()), align='center')
 
 {% include image.html url="/portfolio/assets/images/blogs/cryptography/message2_freq.png" description="<strong>Fig. 3</strong>. Frequency distribution of letters in message 2" %}
 
-*Fig. 3* shows the frequency distribution of message 2. In Fig. 3, `h` has the highest peak. Therefore, the key must be `3`. We can use the following code to decrypt message 2.
+*Fig. 3* shows the frequency distribution of message 2. In Fig. 3, `h` has the highest peak. `h` is three letters away from `e`. Therefore, the key must be `3`. We can use the following code to decrypt message 2.
 
 {% highlight python %}
 print(decrypt_caesar(message2, 3))
@@ -258,36 +260,186 @@ i am setting up safe house co
 ## Chapter 3: Holbein
 ---
 
-The second message from Caesar Cypher talked about "the symbol of death in Holbein". I searched the Holbein on the internet, and after going through several images, one image struck out. The image was a famous painting by Holbein called The Ambassadors. The painting is of two gentlemen standing with many objects in the background. However, there was a weird image at the bottom of the painting. Initially, it seemed like a log of wood. But, when I looked at the image from a different perspective, I noticed a hidden skull. So, perhaps the word 'skull' is the code word.
+The first message from Caesar Cypher talked about `the hidden symbol of death in Holbein` and `switch to vigenere cipher`. I searched the Holbein on the internet, and after going through several images, one image struck out. The image was a famous painting by Holbein called The Ambassadors.  *Fig. 4* shows The Ambassadors by Hans Holbein the Younger.
+
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/holbein.jpg" description="<strong>Fig. 4</strong>. The Ambassadors by Hans Holbein the Younger (Image credit: The National Gallery, UK)" %}
+
+The painting is of two gentlemen standing with many objects in the background. However, there was a weird image at the bottom of the painting. Initially, it seemed like a log of wood. But, upon seeing this image from a different perspective, as seen in *Fig. 5*, one notices a hidden skull. So, perhaps the word `skull` is the code word.
+
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/holbein_skull.jpg" description="<strong>Fig. 5</strong>. The anamorphic skull as restored in 1998, viewed here at an oblique angle from The Ambassadors by Hans Holbein the Younger (Image credit: The National Gallery, UK)" %}
 
 ## Chapter 3: Vigenere
 ---
 
-[Insert image of frequency distribution for message #3]
+Using the following code, we can plot the frequency distribution of message 3.
 
-The third message had a different frequency distribution. We can conclude from the frequency distribution that we cannot use Caesar cypher because it is not a simple shift of all the letters. Each letter seems to have shifted with its key in the third message. However, we are not entirely helpless here. We got some help from message #2 that they will use Vigenere cypher for encryption in their future communications with the secret code word as `skull`. Vigenere cypher uses a secret code word where we shift every letter by the key associated with that word. Following is an example of how we encrypt a message `call sherlock` by using the code word `watson` to get an encrypted message.
+{% highlight python linenos %}
+# message 3
+message3 = "klkbnqlcytfysryucocphgbdizzfcmjwkuchzyeswfogmmetwwossdchrzyldsbwnydednzwnefydthtddbojicemlucdygicczhoadrzcylwadsxpilpiecskomoltejtkmqqymehpmmjxyolwpeewjckznpccpsvsxauyodhalmriocwpelwbcniyfxmwjcemcyrazdqlsomdbfljwnbijxpddsyoehxpceswtoxwbleecsaxcnuetzywfn"
+
+# Get frequency of letters in the message
+freq3 = char_frequency(message3)
+fr3 = sort_freq_plot(freq3)
+
+# Plot frequency distribution
+plt.figure(figsize=(16,6), dpi=80)
+plt.grid()
+plt.title("Frequency distribution of message 3")
+plt.xlabel("Letters")
+plt.ylabel("Number of occurrence")
+plt.bar(list(fr3.keys()), list(fr3.values()), align='center')
+{% endhighlight %}
+
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/message3_freq.png" description="<strong>Fig. 6</strong>. Frequency distribution of letters in message 3" %}
+
+The frequency distribution of message 3, shown in *Fig. 6* do not follow a standard pattern, as seen in *Fig. 1*. We can conclude from the frequency distribution that we cannot use Caesar cypher because it is not a simple shift of all the letters. Each letter seems to have shifted with its key in the third message. However, we are not entirely helpless here. We got some help from message 1 that they will use Vigenere cypher for encryption in their future communications with the secret code word as `skull`.
+
+Vigenere cypher uses a secret code word where we shift every letter by the key associated with that word. Following is an example of how we encrypt a message `call sherlock` by using the code word `watson` to get an encrypted message.
 
 ```
 m: call sherlock
 s: wats onwatson
 e: yaed guardgqx
 ```
-So, we know which cypher to use and the code word. Knowing the codeword may not be as easy as we think. We are lucky when we know the secret code word `skull`. But, we still get gibberish when we implement the code word `skull` to decrypt message #3. Therefore, knowing the code word is not enough; it is also essential to know the length of the codeword.
 
-To find the length of the codeword, we must find an information leak that often happens in long messages with repeating words. Since we are moving the same codeword across the encrypted message, we start seeing peaks in the distribution after a few intervals. You can use the following code to find these peak values.
+So, we know which cypher to use and the code word. Knowing the codeword may not be as easy as we think. We are lucky when we know the secret code word `skull`. But, we still get gibberish when we implement the code word `skull` to decrypt message 3. Therefore, knowing the code word is not enough; it is also essential to know the length of the codeword.
 
-[code to implement the distribution]
+To find the length of the codeword, we must find an information leak that often happens in long messages with repeating words. Since we are moving the same codeword across the encrypted message, we start seeing peaks in the distribution after a few intervals.
 
-The following image shows the graph of peak values. The graph is imperfect, but we can see peaks at the 10th intervals. From these peaks, we can determine the length of the codeword is ten. But, `skull` is a five-letter word. However, if we double the letters, `sskkuullll`, it becomes the ten-letter secret codeword.
+### Cracking the code
 
-> Often, there will be a lot of uneven peaks. Cryptanalysis is not an easy task, and one often needs to guess. Knowing possible lengths can help you guess in the right direction.
+We shift the message as follows and find the coincidences, i.e. the letters of the shifted message with one letter to the right that matches the original cyphertext. Following is an example of shifting the cyphertext.
 
-Use the following code to implement the decryption process of the Vigenere cypher.
+```
+ibmiaqpztphflqypu... <-- original cyphertext
+ ibmiaqpztphflqyp | 0
+  ibmiaqpztphflqy | 0
+   ibmiaqpztphflq | 2
+    ibmiaqpztphfl | 0
+     ibmiaqpztphf | 0
+      ibmiaqpztph | 1
+       ibmiaqpztp | 0
+```
 
-[Insert code]
+In the above shift of messages, the column on the right shows the number of letters matching the cyphertext. When iterating over the message, we will find peaks at different intervals, and the intervals in between the peaks tell us the length of the word. Though, this is not a perfect method as it only gives you an estimate regarding the length of the word. Sometimes, there may be peaks observed at different locations where you may have to guess.
 
-After implementing the decryption algorithm, we get the decrypted message #3.
-[Insert markdown version of message #3]
+We can use the following code to find these peaks. First, we need to define two functions that quantify messages to a list of shifting characters and find the coincidence in the quantified messages with the original cyphertext.
+
+{% highlight python linenos %}
+def quantify_message(message):
+    """Takes the message and returns a list of quantified messages with on right shift"""
+    d_message = copy.deepcopy(message)
+    text = list(d_message)
+
+    new_messages = []
+
+    while text:
+        text.pop(-1)
+        new_messages.append("".join(text))
+
+    return new_messages
+
+def coincedences(message):
+    """Takes a list of messages with one right shift in each message
+    and finds words that coincide with the main message
+    """
+    count_dict = dict()
+    loop_iter = 0
+
+    repeating_messages = quantify_message(message)
+
+    for m in repeating_messages:    
+        count = 0
+        for i in reversed(message):
+            for j in reversed(m):
+                if i == j:
+                    count += 1
+                m = m[:-1]
+                break
+        count_dict[str(loop_iter)] = count
+        loop_iter += 1
+
+    return count_dict
+{% endhighlight %}
+
+Then, we implement the following code to get the graph of intervals.
+
+{% highlight python linenos %}
+# Using only first 100 characters of the cyphertext
+freq_d = coincedences(message3[:100])
+
+# Plotting the graph
+plt.figure(figsize=(20,6), dpi=80)
+plt.xticks(rotation=90)
+plt.grid()
+plt.title("Frequency of coincidences")
+plt.xlabel("Shifts (Iteration by one shift)")
+plt.ylabel("Number of coinciding letters")
+plt.bar(list(freq_d.keys()), list(freq_d.values()), align='center')
+{% endhighlight %}
+
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/message3_intervals.png" description="<strong>Fig. 7</strong>. Intervals of coincidences message 3" %}
+
+*Fig. 7* shows the graph of peak values. The graph is imperfect, but we can see peaks at the 10th intervals. From these peaks, we can determine the length of the codeword is ten. But, `skull` is a five-letter word. However, if we double the letters, `sskkuullll`, it becomes the ten-letter secret codeword.
+
+> Often, there will be a lot of uneven peaks. Cryptanalysis can sometimes be difficult, and one often needs to guess. Knowing possible lengths can help you guess in the right direction. Also, one needs to resort to trial and error with different combinations of the known keyword.
+{:class="alert alert-info"}
+
+Use the following code to implement the decryption process of the Vigenere cypher. First we define a function to perform the decryption and then we execute the function to get the decrypted text.
+
+{% highlight python linenos %}
+def vigenere_decrypt(message, secret):
+    """Takes cyphertext and secret word and returns the plaintext"""
+    code = []
+    for c in secret:
+        code.append(ord(c) - ord('a'))
+
+    encoding = []
+    decrypted = ""
+
+    q = len(message) // len(secret)
+    r = len(message) % len(secret)
+
+    encoding = code * q
+    remaining = code[:r]
+    encoding.extend(remaining)
+
+    for c, e in zip(message, encoding):
+        decrypted += chr((ord(c) - ord('a') - e) % 26 + ord('a'))
+
+    return decrypted
+
+{% endhighlight %}
+
+Implement the following function:
+
+{% highlight python linenos %}
+# Skull was the hidden symbol of death in Holbein the younger, The Ambassador painting.
+secret = "sskkuullll"
+print(vigenere_decrypt(message3, secret))
+{% endhighlight %}
+
+The output of the above code will be as follows:
+
+{% highlight python %}
+startwarningiheardreportofourbreakinonthenewsstillwaitingonalarmtestschedulesiwillreportbacktomorrowwithfinalplanforextrasecurityisuggestweburnourlettersafterreadingandswitchourletterstonumbersusingpolybiussquaredropmessageunderthebenchattrainstationend
+{% endhighlight %}
+
+After reorganising the output, we get the following message:
+
+```
+start
+warning i heard report of our break in on the news
+still waiting on alarm test schedules
+i will report back tomorrow with final plan
+for extra security i suggest we burn our letters after reading
+and switch our letters to numbers
+using polybius squared rop message
+under the bench at train station
+end
+```
+
+The critical clue from message 3 is the `polybius squared rop message`.
 
 ## Chapter 4: Polybius
 
