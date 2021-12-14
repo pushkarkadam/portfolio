@@ -17,18 +17,21 @@ Following this, there are going to be spoilers to the puzzles. So, if you want t
 {:class="alert alert-warning"}
 
 ## Chapter 1: The discovery
+---
 
 The contents from the bag thrown out of the car were mysterious. There were blueprints, a circuit diagram, a newspaper clipping, a business card with a hand-written 250 number.
 
 [Images]
-![](assets/images/blogs/cryptography/discovery0.jpg)
+
+![discovery0](bag)
+
 <table>
     <tr>
-        <td><img src="/../../assets/images/blogs/cryptography/discovery0.jpg"  alt="1" width = 360px height = 640px ></td>
-        <td><img src="/../../assets/images/blogs/cryptography/discovery1.jpg" alt="2" width = 360px height = 640px></td>
+        <td><img src="/portfolio/assets/images/blogs/cryptography/discovery0.jpg"  alt="1" height="50%" width="50%" ></td>
+        <td><img src="/portfolio/assets/images/blogs/cryptography/discovery1.jpg" alt="2" height="50%" width="50%"></td>
     </tr>
 </table>
-![](../../assets/images/blogs/cryptography/discovery0.jpg)| [](../../assets/images/blogs/cryptography/discovery0.jpg)
+![](/portfolio/assets/images/blogs/cryptography/discovery0.jpg)| [](/portfolio/assets/images/blogs/cryptography/discovery0.jpg)
 
 But, one item stood out among the rest. It seemed like a secret code.
 
@@ -42,6 +45,7 @@ After returning home, I heard the evening news that said:
 I realised, to break this code, I must retrace their steps.
 
 ## Chapter 2: Caesar
+---
 
 The business card looked promising. Luckily, I have a friend who works in Hudson Bay Lodge. I entered that dark hotel. My friend informed me that someone had checked into room 250 for three days. He gave me a copy of the key and told me that I only had two minutes to look.
 
@@ -102,11 +106,13 @@ Similar to message 1, we must also try
 
 [Insert code]
 
-## Chapter 2: Holbein
+## Chapter 3: Holbein
+---
 
 The second message from Caesar Cypher talked about "the symbol of death in Holbein". I searched the Holbein on the internet, and after going through several images, one image struck out. The image was a famous painting by Holbein called The Ambassadors. The painting is of two gentlemen standing with many objects in the background. However, there was a weird image at the bottom of the painting. Initially, it seemed like a log of wood. But, when I looked at the image from a different perspective, I noticed a hidden skull. So, perhaps the word 'skull' is the code word.
 
 ## Chapter 3: Vigenere
+---
 
 [Insert image of frequency distribution for message #3]
 
