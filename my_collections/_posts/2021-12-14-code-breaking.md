@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Preventing a bank robbery with cryptography and python"
+title:  "Solving a mystery with cryptography and python"
 date:   2021-12-14 01:00:00 +1100
 categories: [coding, cryptography]
 cover_image: 2021-12-14-cover.jpg
@@ -21,21 +21,23 @@ Following this, there are going to be spoilers to the puzzles. So, if you want t
 
 The contents from the bag thrown out of the car were mysterious. There were blueprints, a circuit diagram, a newspaper clipping, a business card with a hand-written 250 number.
 
-[Images]
+![bag far](/portfolio/assets/images/blogs/cryptography/bag_far.jpg){:class="img-fluid"}
 
-![discovery0](bag)
+![bag](/portfolio/assets/images/blogs/cryptography/bag.jpg){:class="img-fluid"}
 
-<table>
-    <tr>
-        <td><img src="/portfolio/assets/images/blogs/cryptography/discovery0.jpg"  alt="1" height="50%" width="50%" ></td>
-        <td><img src="/portfolio/assets/images/blogs/cryptography/discovery1.jpg" alt="2" height="50%" width="50%"></td>
-    </tr>
-</table>
-![](/portfolio/assets/images/blogs/cryptography/discovery0.jpg)| [](/portfolio/assets/images/blogs/cryptography/discovery0.jpg)
+![bag_contents](/portfolio/assets/images/blogs/cryptography/bag_contents.jpg){:class="img-fluid"}
+
+![vault blueprints](/portfolio/assets/images/blogs/cryptography/vault_bp.jpg){:class="img-fluid"}
+
+![circuit diagram](/portfolio/assets/images/blogs/cryptography/circuit.jpg){:class="img-fluid"}
+
+![newspaper](/portfolio/assets/images/blogs/cryptography/newspaper.jpg){:class="img-fluid"}
+
+![business card](/portfolio/assets/images/blogs/cryptography/business_card.jpg){:class="img-fluid"}
 
 But, one item stood out among the rest. It seemed like a secret code.
 
-[Image of angles]
+![angles](/portfolio/assets/images/blogs/cryptography/angles.jpg){:class="img-fluid"}
 
 After returning home, I heard the evening news that said:
 
@@ -51,17 +53,47 @@ The business card looked promising. Luckily, I have a friend who works in Hudson
 
 When I entered the room, I saw a wastebasket with some papers. Luckily, I found clue #1, two encrypted messages.
 
-[Insert image of caesar cypher Clue #1]
+![message 1 and 2](/portfolio/assets/images/blogs/cryptography/message1_2.jpg){:class="img-fluid"}
 
 The messages are as follows:
 
-[Insert a markdown of two messages]
+**Message 1**:
+
+```
+gluhtlishjrvbadvyyplkoah
+avbxjpwolypzavvdlhrvuu
+leatlzzhnlzdpajoavcpnl
+ulyljpwolyrlfdvykpzaola
+pkkluzffivsvmklhaoput
+fmhcbypalovsilpuluk
+```
+**Message 2**:
+```
+vwduwljudeehghyhubwklq
+jlfrxogilqgsohdvhuhwxuq
+dqbeoxhsuqwvieuydxowd
+qgodupghvljqedvhgrqzk
+ifkedqnbrxghflghrqldpvhw
+wlqjxsvdihkrxvhfr
+```
 
 Before leaving the hotel, I noticed something else. It looked like an impression from another message. So, I scribbled with a pencil to reveal the hidden text underneath it. The text looked like another cypher.
 
-[Image of cyphers message #3]
+![message 3](/portfolio/assets/images/blogs/cryptography/message3.jpg){:class="img-fluid"}
 
-[Markdown text of cypher]
+**Message 3**:
+```
+Klkbnqlcytfysryucocphgbdizz
+fcmjwkuchzyeswfogmmetwwossd
+chrzyldsbwnydednzwnefydthtd
+dbojicemlucdygicczhoadrzcyl
+wadsxpilpiecskomoltejtkmqqy
+mehpmmjxyolwpeewjckznpccpsv
+sxauyodhalmriocwpelwbcniyfx
+mwjcemcyrazdqlsomdbfljwnbij
+xpddsyoehxpceswtoxwbleecsax
+cnuetzywfn
+```
 
 ### Breaking the code
 
@@ -70,19 +102,74 @@ Codebreakers often look for a leak of information. Information leaks can take pl
 In the English language, every paragraph has a frequency of letters used. This frequency chart, shown below, acts as a fingerprint. For example, the letter 'e' has the highest frequency. So, when we see an encrypted message, we must find a letter with the highest frequency. The letter with the highest frequency in the encrypted message often corresponds to 'e'. Let us put this theory into practice using the python programming language.
 
 > You may want to use python packages such as Matplotlib and Jupyter Notebook to make coding easier for you.
+{:class="alert alert-info"}
 
-[Coding part]
+###### Import necessary python packages
+{% highlight python linenos %}
+import copy
+import matplotlib.pyplot as plt
+{% endhighlight %}
 
 #### Message 1
 
-[Markdown text]
-
 Let us do a quick frequency analysis of encrypted message 1.
 
-[Insert frequency code]
-[Insert frequency graph]
+We must first define two functions that will help us count the frequency of letters in the encrypted message.
 
-We can see that the letter 'L' has the highest frequency. Letter 'L' is seven spaces away from 'E'. So, the key must be seven. This encryption is an example of Caesar Cypher, where the messages are encrypted and decrypted using forward and backward shifts, respectively. The following example shows how we encrypt a message by shifting every letter by two spaces to get the encrypted message.
+{% highlight python linenos %}
+def char_frequency(message):
+    """Takes message as input and returns the frequency of letters as a dictionary"""
+    freq = dict()
+
+    for c in message:
+        freq[c] = freq.get(c, 0) + 1
+
+    return freq
+
+
+def sort_freq_plot(frequency):
+    """Takes a dictionary of frequency as input and returns a sorted dictionary for plotting"""
+    fr = dict()
+    alphabets = 'abcdefghijklmnopqrstuvwxyz'
+
+    for i in alphabets:
+        if not i in frequency:
+            frequency[i] = 0
+
+    for i in sorted(frequency):
+        fr[i] = frequency[i]
+
+    return fr
+
+{% endhighlight %}
+
+Now, we must plot the frequency graph of the message that will help us find the type of cypher used.
+
+{% highlight python linenos %}
+# message
+message1 = "gluhtlishjrvbadvyyplkoahavbxjpwolypzavvdlhrvuuleatlzzhnlzdpajoavcpnlulyljpwolyrlfdvykpzaolapkkluzffivsvmklhaoputfmhcbypalovsilpuluk"
+
+freq1 = char_frequency(message1)
+fr1 = sort_freq_plot(freq1)
+
+# Plot frequency distribution
+plt.figure(figsize=(16,6), dpi=80)
+plt.grid()
+plt.title("Frequency distribution of message 1")
+plt.xlabel("Letters")
+plt.ylabel("Number of occurrence")
+plt.bar(list(fr1.keys()), list(fr1.values()), align='center')
+{% endhighlight %}
+
+
+![message1 frequency analysis](/portfolio/assets/images/blogs/cryptography/message1_freq.png){:class="img-fluid"}
+
+The frequency graph of message #1 is similar to the frequency graph of any passage in the English language. In other words, in every passage in the English language, certain letters appear in large numbers than the others.
+
+![English frequency](/portfolio/assets/images/blogs/cryptography/english_freq.png){:class="img-fluid"}
+
+
+We can see that the letter `l` has the highest frequency of occurrence. When we compare the frequency distribution graph of message #1 and the English language, `l` and `e` have the largest peaks. Letter `l` is seven spaces away from `e`. So, the key must be seven. This encryption is an example of Caesar Cypher, where the messages are encrypted and decrypted using forward and backward shifts, respectively. The following example shows how we encrypt a message by shifting every letter by two spaces to get the encrypted message.
 ```
 # Using caesar cypher
 
