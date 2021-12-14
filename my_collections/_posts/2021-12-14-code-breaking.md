@@ -212,6 +212,7 @@ switch to vigenere cipher
 keyword is the tidden syybol of death
 in my favurite holbein end
 ```
+{:class="alert alert-success"}
 
 #### Message 2
 
@@ -256,6 +257,7 @@ please return any blueprnts fbr vault and larm
 design based on whfch bank you decide on
 i am setting up safe house co
 ```
+{:class="alert alert-success"}
 
 ## Chapter 3: Holbein
 ---
@@ -438,11 +440,421 @@ using polybius squared rop message
 under the bench at train station
 end
 ```
+{:class="alert alert-success"}
 
 The critical clue from message 3 is the `polybius squared rop message`.
 
 ## Chapter 4: Polybius
+---
+
+After deciphering the first three messages, I took a stroll to the train station. But, I didn't see anything under the bench, as message 3 pointed out. But then, I glanced at a burnt paper close to the train tracks.
+
+![message 4](/portfolio/assets/images/blogs/cryptography/polybius_message.jpg){:class="img-fluid"}
+
+Transcript of the above message:
+
+```
+44541134541123335344541242
+43424432514121231131135315
+54425442444243443251415343
+54324234411125513553341342
+43225343114454345343225134
+31421432513412533412155415
+34513351444411225144425442
+44441534512355154321345111
+13112123514254315333214243
+51445315341434512542531544
+335154325341443 (cut off)
+43513544
+```
+
+Polybius cypher works on a grid system. The message `polybius squared rop` makes me wonder if there was a typo. I think they meant `top` instead of `rop`. So, we need to make a grid starting from the top.
+
+```
+  | 0 | 1 | 2 | 3 | 4 |
+--+---+---+---+---+---+
+0 | a | f | k | p | u |
+--+---+---+---+---+---+
+1 | b | g | l | q | v |
+--+---+---+---+---+---+
+2 | c | h | m | r | w |
+--+---+---+---+---+---+
+3 | d | i | n | s | x |
+--+---+---+---+---+---+
+4 | e | j | o | t | y |
+--+---+---+---+---+---+
+```
+
+Once we set up the grid, we use two numbers in sequence to encrypt every character. We use `00` to encrypt `a`, and `44` to encrypt `y`. Refer to the following example:
+
+```
+  +----+----+----+----+----+
+m:|  h |  e |  l |  l |  o |
+  +----+----+----+----+----+
+e:| 21 | 40 | 12 | 12 | 42 |
+  +----+----+----+----+----+
+```
+### Cracking the code
+
+We must couple two numbers from the number sequence of message 4 to get the coordinates. We use the coordinates to find the characters from the Polybius square. To accomplish this, we first create the following function:
+
+{% highlight python linenos %}
+def polybius(in_message, poly_grid):
+    """Takes message and a polybius grid and returns the decrypted message"""
+    ciphers = []
+    decrypted = ''
+    st = ''
+
+    # Removing white spaces
+    for c in in_message:
+        if c != ' ':
+            st += c
+        else:
+            ciphers.append(st)
+            st = ''
+
+    for cipher in ciphers:
+        # converting string to int
+        n = [int(x) for x in cipher]
+
+        # creating tuples from the numbers
+        grid = [x for x in zip(*[iter(n)]*2)]
+
+        message = ''
+
+        for co_ord in grid:
+            message += poly_grid[co_ord[0] - 1][co_ord[1] - 1]
+
+        # Adding message to decrypted
+        decrypted += message
+
+    return decrypted
+{% endhighlight %}
+
+Then, we execute the function to get the decrypted message.
+
+{% highlight python linenos %}
+# message 4
+message4 = "44541134541123335344541242 43424432514121231131135315 54425442444243443251415343 54324234411125513553341342 43225343114454345343225134 31421432513412533412155415 34513351444411225144425442 44441534512355154321345111 13112123514254315333214243 51445315341434512542531544 335154325341443 43513544"
+
+# polybius square
+poly = [['a', 'f', 'k', 'p', 'u'],
+        ['b', 'g', 'l', 'q', 'v'],
+        ['c', 'h', 'm', 'r', 'w'],
+        ['d', 'i', 'n', 's', 'x'],
+        ['e', 'j', 'o', 't', 'y']]
+
+# decrypting and printing the message
+print(polybius(message4, poly))
+{% endhighlight %}
+
+We should get the following output:
+
+{% highlight python %}
+startalmostfinishedblackoutitisinshedonthirdaveworkingonastrongercipherforfuturemessagesitissurelyunbreakableitcombinesourpreviousmethods
+{% endhighlight %}
+
+After reorganising the output, we get the following message:
+
+```
+start
+almost finished blackout
+it is in shed on third ave
+working on a stronger cipher for future messages
+it is surely unbreakable
+it combines our previous methods
+```
+{:class="alert alert-success"}
+
+## Chapter 5: Zeros and Ones
+---
+
+Finally, after decoding the first four messages, I learned the safehouse's location and name ("blackout"). I approached the safe house. There wasn't anyone around, so I entered the safehouse. It was a dark place. Luckily, I brought a flashlight and grabbed some quick images.
+
+![binary 1](/portfolio/assets/images/blogs/cryptography/binary1.jpg){:class="img-fluid"}
+
+![Newspaper binary](/portfolio/assets/images/blogs/cryptography/newspaper_binary.jpg){:class="img-fluid"}
+
+![angle rotation](/portfolio/assets/images/blogs/cryptography/angle_rotation.jpg){:class="img-fluid"}
+
+![Angle number](/portfolio/assets/images/blogs/cryptography/angle_number.jpg){:class="img-fluid"}
+
+![Encryption steps](/portfolio/assets/images/blogs/cryptography/encryption_steps.jpg){:class="img-fluid"}
+
+![base 3](/portfolio/assets/images/blogs/cryptography/base3.jpg){:class="img-fluid"}
+
+![compass](/portfolio/assets/images/blogs/cryptography/compass.jpg){:class="img-fluid"}
+
+It seems like the clues that I found in the safehouse has everything to do with the clues that I found from the bag. The clues from the safehouse provide steps to encrypt the message.
+
+##### Angles
+
+My first order of business was to decipher the angles. One of the clues from the safehouse pages was about a compass. Also, every angle in the message has a cardinal direction (East, West, North, South) and an intermediate direction (North East, North West, South East, South West). Digging deeper into some pages, I realised that the angles follow a number system of base 3. So, I concluded that the angles are as follows:
+
+```
+    10 00 11
+     \ | /
+      \|/
+  11-------01
+      /|\
+     / | \
+    01 10 00
+```
+
+We can decode the angles with the compass direction and the corresponding binary numbers associated with the direction. First, we must start with the cardinal angle value and take the intermediate angle value. We can decode the angles as follows:
+
+```
+|/        |     |/
+         /
+0011    0001   0011
+```
+
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/angles.jpg" description="<strong>Fig. 8</strong>. Image of angles from the bag" %}
+
+After decoding the compass angles, we can use the image found from the bag in *Fig. 8* and decode the message. The message is still a bunch of binary numbers and not much use to us yet. The message from *Fig. 8* translates as follows:
+
+```
+1000 1111 1010 1001 0000 1111 1100 0001 0010 1000 1010 0010 1110 1000 0101 1111 0011 1100 0011 1110 0011 0000 1010 0001 1111 1011
+1011 0100 0011 1010 0111 0111 1000 0001 0101 0011 1010 1000 1000 1000 1010 1111 1000 0111 1011 0111 1111 1010
+1100 1111 0001 1000 1001 0100 0110 0101 0000 1110 1011 0111 1010 0010 0000 0100 1101 0010 1111 1000 1101 0011 1001
+0001 0101 1111 1110 1011 0010 0001 0000 1110 0100 0100 1100 0001 0100 1011 1101 0100 0010 0000 1100 1011 1101 0100
+0011 0011 0001 0010 1111 0010 1011 1001 1100 0110 0011 0110 1010 0000 0011 0111 1101 0000 0100 0101 1001 0011 1011 0010
+1000 0111 0010 1110 1100 1101 1011 1111 1000 0010 0110 1111 1100 0000 1100 0110 1100 0111 0011 0001 0011 0011
+1011 1010 0010 1100 1000 0011 1010 1011 1110 1011 0010 0010 1101 1000 1011 0111 1100 0010
+```
+
+I had to decode the angles manually. So, there is a chance of misplacing a number. This misplacement could be a catastrophe.
+
+We must combine the binary digits and eliminate all the white spaces as follows:
+
+{% highlight python linenos %}
+message5 = """1000 1111 1010 1001 0000 1111 1100 0001 0010 1000 1010 0010 1110 1000 0101 1111 0011 1100 0011 1110 0011 0000 1010 0001 1111 1011
+1011 0100 0011 1010 0111 0111 1000 0001 0101 0011 1010 1000 1000 1000 1010 1111 1000 0111 1011 0111 1111 1010
+1100 1111 0001 1000 1001 0100 0110 0101 0000 1110 1011 0111 1010 0010 0000 0100 1101 0010 1111 1000 1101 0011 1001
+0001 0101 1111 1110 1011 0010 0001 0000 1110 0100 0100 1100 0001 0100 1011 1101 0100 0010 0000 1100 1011 1101 0100
+0011 0011 0001 0010 1111 0010 1011 1001 1100 0110 0011 0110 1010 0000 0011 0111 1101 0000 0100 0101 1001 0011 1011 0010
+1000 0111 0010 1110 1100 1101 1011 1111 1000 0010 0110 1111 1100 0000 1100 0110 1100 0111 0011 0001 0011 0011
+1011 1010 0010 1100 1000 0011 1010 1011 1110 1011 0010 0010 1101 1000 1011 0111 1100 0010"""
+
+message5 = message5.replace(" ", "")
+message5_str = message5.replace("\n", "")
+print(message5_str)
+{% endhighlight %}
+
+You should get the following output:
+
+{% highlight python %}
+10001111101010010000111111000001001010001010001011101000010111110011110000111110001100001010000111111011101101000011101001110111100000010101001110101000100010001010111110000111101101111111101011001111000110001001010001100101000011101011011110100010000001001101001011111000110100111001000101011111111010110010000100001110010001001100000101001011110101000010000011001011110101000011001100010010111100101011100111000110001101101010000000110111110100000100010110010011101100101000011100101110110011011011111110000010011011111100000011000110110001110011000100110011101110100010110010000011101010111110101100100010110110001011011111000010
+{% endhighlight %}
+
+##### Newspaper
+
+I found a newspaper in the safe house where I observed that every consonant was `0` and vowel was `1`. So, the newspaper found in the bag has something to do with the decryption. I learned this with the message from the newspaper that was encrypted as follows:
+
+```
+Brilliant driver
+001001000 001010
+```
+
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/newspaper.jpg" description="<strong>Fig. 9</strong>. Newspaper found in the bag" %}
+
+Following is the transcript of the newspaper:
+
+```
+the whole grain goodness of blue chip dividend stocks has its limits
+utility stocks consumer staples pipelines telecoms and
+real estate investment trusts have all lost ground over
+the past month even while the broader market has been flat
+with the bond market signalling an expectation of rising interest
+rates the five year rally for steady blue chip dividend payers has
+stalled should you be scared if you own a lot of these stocks
+either directly or through mutual funds or exchange traded
+funds david baskin president of baskin financial services has
+a two pronged answer keep your top quality dividend stocks but be
+prepared to follow his firms example in trimming holdings in stocks
+such as transcanada corp keyera corp and pembina pipeline corp lets
+have mr baskin run us through his thinking on dividend stocks which
+are a big part of the portfolios his firm puts together
+```
+
+We must encode the text from fig 9 to its binary form. We can use the following code to accomplish this task:
+
+We remove the white spaces
+{% highlight python linenos %}
+pad = "the whole grain goodness of blue chip dividend stocks has its limits utility stocks consumer staples pipelines telecoms and real estate investment trusts have all lost ground over the past month even while the broader market has been flat with the bond market signalling an expectation of rising interest rates the five year rally for steady blue chip dividend payers has stalled should you be scared if you own a lot of these stocks either directly or through mutual funds or exchange traded funds david baskin president of baskin financial services has a two pronged answer keep your top quality dividend stocks but be prepared to follow his firms example in trimming holdings in stocks such as transcanada corp keyera corp and pembina pipeline corp lets have mr baskin run us through his thinking on dividend stocks which are a big part of the portfolios his firm puts together"
+
+pa = pad.replace(" ","")
+onepad = pa[:len(message5_str)]
+{% endhighlight %}
+
+Once we have removed the white spaces, we define a function to encode the newspaper text as follows:
+
+{% highlight python linenos %}
+def pad_to_bin(message):
+    vowels = {'a', 'e', 'i', 'o', 'u', 'y'}
+    bin_pad = "0b"
+    for c in message:
+        if c in vowels:
+            bin_pad += "1"
+        else:
+            bin_pad += "0"
+
+    return bin_pad
+{% endhighlight %}
+
+We execute the encoding function for the text as follows:
+
+{% highlight python linenos %}
+bin_pad = pad_to_bin(onepad)
+print(bin_pad)
+{% endhighlight %}
+
+We should get the following output:
+
+```
+0b00100101001100110010010001100100101010000100001010001010010101010010000100101000100100101010100101010010001101001011001000100001000010110001000011001010001010001000101000101001001101001001001001100010010000101000100100100100100101001001011010010100100101000101000101011110010010100011010011001001010100011100010001001000110011101001010101111001010100010100100011001001010001100001100010110010001010001001001010010000101001001000101010010010010010100110010010100101001001001010001001101110010011010101010100001000010010010101001010010010010001010001100010010001001000100010000100100010001010101000111010100100010010101010101010001000
+```
+
+##### XOR
+
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/encryption_steps.jpg" description="<strong>Fig. 10</strong>. Encryption steps" %}
+
+The second step in the encryption process, as shown in *Fig. 10* highlighted using padding from a newspaper article to encrypt a binary message. In the second step, we see two binary sets of binary numbers on either side of the encryption. When we look closer, we find that a bitwise XOR operation with the newspaper padding reverts the binary sequence to its pre-encryption state.
+
+We perform the bitwise XOR operation of the binary sequence from the angles and the newspaper article as follows:
+
+{% highlight python linenos %}
+# convert the string to binary format
+message5_pad = int(bin_pad,2)
+
+# bitwise xor operation
+x_message = message5 ^ message5_pad
+
+# Converting to binary format
+final_bin = bin(x_message)
+
+# Removing the first two characters that indicate binary 0b
+decrypted_pad = str(final_bin)[2:]
+
+print(decrypted_pad)
+{% endhighlight %}
+
+We should get the following output:
+
+{% highlight python %}
+10101010100110100010101110100101100000001110000001100010000010100001110100010110101000100000100010101001100000001000100001010110100010100100001101100010101000000010010110101110100000110110100010101101010110100001110101000001100110100010000100110110100100001000001110100110100110011010010110010110101110101110010101000110100010100101010000110010100001010110100000000010100100100010101110100000110110100010101101010110100100100010101010100101100110100010000100110110100101100010010101000000100000001110101010001010001001101001001001010100100000100010100110100010100110000000110110100001100000010110010110000110100100100001110101001010
+{% endhighlight %}
+
+Once we have decrypted the binary sequence, as per the clues from the safehouse, we must group them in a sequence of three and convert them into decimal numbers as follows:
+
+{% highlight python linenos %}
+n_list = []
+
+while decrypted_pad:
+    n_list.append(decrypted_pad[:3])
+    decrypted_pad = decrypted_pad[3:]
+
+poly_cipher = []
+for n in n_list:
+    poly_cipher.append(str(int(n, 2)))
+
+poly_cipher_combined = "".join(poly_cipher)
+print(poly_cipher_combined)
+{% endhighlight %}
+
+We should get the following output:
+
+```
+5251505351300340304050350552101052300210255051033052004553501550532550352031504115510203515146454553534521505124145025500051105350155053255110525131504115513045201003524242322225101051505140155030054541511035222
+```
+
+##### Polybius Spiral
+
+One of the images from the safe house showed a spiral of numbers. Also, there is a spiral on the first step of encryption in *Fig. 10*. Also, message 4 mentions the use of previous methods. So, we must use a modified version of Polybius square as follows:
+
+```
+  | 0 | 1 | 2 | 3 | 4 | 5 |
+--+---+---+---+---+---+---+
+0 | f | g | h | i | j | k |
+--+---+---+---+---+---+---+
+1 | e | x | y | z | 0 | l |
+--+---+---+---+---+---+---+
+2 | d | w | 7 | 8 | 1 | m |
+--+---+---+---+---+---+---+
+3 | c | v | 6 | 9 | 2 | n |
+--+---+---+---+---+---+---+
+4 | b | u | 5 | 4 | 3 | o |
+--+---+---+---+---+---+---+
+5 | a | t | s | r | q | p |
+--+---+---+---+---+---+---+
+```
+
+Same as in the Polybius square method, we must now group the decimal number sequence into groups of two to act as coordinates to identify the character in the Polybius square. We define a new Polybius function that handles the input in this case.
+
+{% highlight python linenos %}
+def polybius2(codes, poly_grid):
+    grid = [x for x in zip(*[iter(codes)]*2)]
+    message = ''
+
+    for co in grid:
+        x = int(co[0])
+        y = int(co[1])
+        if x > 5 or y > 5:
+            message += '?'
+        else:
+            message += poly_grid[x][y]
+
+    return message
+{% endhighlight %}
+
+We implement the polybius function by executing the following code:
+
+{% highlight python linenos %}
+pol4 = [['f', 'g', 'h', 'i', 'j', 'k'],
+        ['e', 'x', 'y', 'z', '0', 'l'],
+        ['d', 'w', '7', '8', '1', 'm'],
+        ['c', 'v', '6', '9', '2', 'n'],
+        ['b', 'u', '5', '4', '3', 'o'],
+        ['a', 't', 's', 'r', 'q', 'p']]
+
+decrypted_message5 = polybius2(poly_cipher_combined, pol4)
+print(decrypted_message5)
+{% endhighlight %}
+
+We should get the following output:
+
+{% highlight python %}
+startcibcbankseeschematicsforalarmandvaulthitt?oorrowat10amafteralarmtestvaultcodeis5567meetatblackouten7
+{% endhighlight %}
+
+After reorganising the output, we have the final message.
+
+```
+start
+cibc bank see schematics for alarm and vault
+hit t?oorrow at 10am after alarm test
+vault code is 5567
+meet at blackout
+en7
+```
+{:class="alert alert-success"}
+
+The word `tomorrow` is misspelt in the final message. This error is a good example of how a single bit change can cause major errors. Thankfully, the error is not too large to not figure out what the final message has to say.
+
+## Epilogue
+---
+
+I decrypted the secret code, and the police have accepted my information and now acting on it.
+
+## Acknowledgement
+---
+
+If it is still not obvious, let me clarify that the above story is fictitious, and any events mentioned above never happened. However, I am grateful to Khan Academy for this puzzle, which I recently learned, was released in 2014. All the images provided as clues are from Khan Academy, and they deserve full credit for those images.
+
+I accidentally stumbled upon this puzzle while learning cryptography. Some of the puzzles were very difficult for me. Thanks to Khan Academy, I recently learned about the frequency analysis of a message and its role in encryption. I learned several encryption techniques while doing this challenge that I did not know before. I would have been lost without some clues provided by the challenge and the community discussion in the comments.
 
 #### Image credit
 ---
 Cover photo by [alexey turenkov](https://unsplash.com/@2renkov?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank"} on [Unsplash](https://unsplash.com/s/photos/detective?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText){:target="_blank"}
+
+Clue images provided by [Khan Academy](https://www.khanacademy.org/computing/computer-science/cryptography/cryptochallenge/a/cryptochallenge-introduction){:target="_blank"}
