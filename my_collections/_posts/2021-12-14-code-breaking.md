@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Solving a mystery with cryptography and python"
+title:  "Solving a Mystery with Cryptography and Python"
 date:   2021-12-14 01:00:00 +1100
 categories: [coding, cryptography]
 cover_image: 2021-12-14-cover.jpg
@@ -37,11 +37,9 @@ The contents from the bag thrown out of the car were mysterious. There were blue
 
 ![business card](/portfolio/assets/images/blogs/cryptography/business_card.jpg){:class="img-fluid"}
 
-But, one item stood out among the rest. It seemed like a secret code.
-
 ![angles](/portfolio/assets/images/blogs/cryptography/angles.jpg){:class="img-fluid"}
 
-After returning home, I heard the evening news that said:
+But, one item stood out among the rest. It seemed like a secret code. After returning home, I heard the evening news that said:
 
 > Two thieves in their mid-20s are suspected to be in the area; they have been known to strike in neighbouring towns. Just earlier this week, the AMCO insurance office was burglarised and documents were stolen. Reward is being offered for information leading to their arrest...
 {:class="blog-blockquote"}
@@ -307,9 +305,9 @@ s: wats onwatson
 e: yaed guardgqx
 ```
 
-So, we know which cypher to use and the code word. Knowing the codeword may not be as easy as we think. We are lucky when we know the secret code word `skull`. But, we still get gibberish when we implement the code word `skull` to decrypt message 3. Therefore, knowing the code word is not enough; it is also essential to know the length of the codeword.
+So, we know which cypher to use and the code word. However, knowing the code word may not be enough to decrypt the message. We are lucky when we know the secret code word `skull`. But, we still get gibberish when we implement the code word `skull` to decrypt message 3. Therefore, knowing the code word is not enough; it is also essential to know the length of the code word.
 
-To find the length of the codeword, we must find an information leak that often happens in long messages with repeating words. Since we are moving the same codeword across the encrypted message, we start seeing peaks in the distribution after a few intervals.
+To find the length of the code word, we must find an information leak that often happens in long messages with repeating words. Since we are moving the same code word across the encrypted message, we start seeing peaks in the distribution after a few intervals.
 
 ### Cracking the code
 
@@ -383,7 +381,7 @@ plt.ylabel("Number of coinciding letters")
 plt.bar(list(freq_d.keys()), list(freq_d.values()), align='center')
 {% endhighlight %}
 
-{% include image.html url="/portfolio/assets/images/blogs/cryptography/message3_intervals.png" description="<strong>Fig. 7</strong>. Intervals of coincidences message 3" %}
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/message3_intervals.png" description="<strong>Fig. 7</strong>. Intervals of coincidences of message 3" %}
 
 *Fig. 7* shows the graph of peak values. The graph is imperfect, but we can see peaks at the 10th intervals. From these peaks, we can determine the length of the codeword is ten. But, `skull` is a five-letter word. However, if we double the letters, `sskkuullll`, it becomes the ten-letter secret codeword.
 
@@ -572,7 +570,7 @@ it combines our previous methods
 ## Chapter 5: Zeros and Ones
 ---
 
-Finally, after decoding the first four messages, I learned the safehouse's location and name ("blackout"). I approached the safe house. There wasn't anyone around, so I entered the safehouse. It was a dark place. Luckily, I brought a flashlight and grabbed some quick images.
+Finally, after decoding the first four messages, I learned the safehouse's location and name ("blackout"). I approached the safehouse. There wasn't anyone around, so I entered the safehouse. It was a dark place. Luckily, I brought a flashlight and quickly snapped some images.
 
 ![binary 1](/portfolio/assets/images/blogs/cryptography/binary1.jpg){:class="img-fluid"}
 
@@ -592,13 +590,13 @@ It seems like the clues that I found in the safehouse has everything to do with 
 
 ##### Angles
 
-My first order of business was to decipher the angles. One of the clues from the safehouse pages was about a compass. Also, every angle in the message has a cardinal direction (East, West, North, South) and an intermediate direction (North East, North West, South East, South West). Digging deeper into some pages, I realised that the angles follow a number system of base 3. So, I concluded that the angles are as follows:
+My first order of business was to decipher the angles. One of the clues from the safehouse pages was about a compass. Also, every angle in the message has a cardinal direction (East, West, North, South) and an intermediate direction (North East, North West, South East, South West). Digging deeper into some pages, I realised that the angles follow a number system that limits up to the number `3`. So, I concluded that the angles are as follows:
 
 ```
     10 00 11
      \ | /
       \|/
-  11-------01
+  11---+---01
       /|\
      / | \
     01 10 00
@@ -744,7 +742,7 @@ Now, if we perform the operation of `(A xor B) xor B` with get the result back t
 |   0   |  1  |    1   |
 {:class="table table-sm table-bordered"}
 
-Therefore, performing an `xor` operation on the final message with the newspaper padding will result in the message We perform the bitwise XOR operation of the binary sequence from the angles and the newspaper article as follows:
+Therefore, performing an `xor` operation on the final message in the binary sequence with the newspaper padding will result in the pre-encrypted binary sequence. We perform the bitwise XOR operation of the binary sequence from the angles and the newspaper article as follows:
 
 {% highlight python linenos %}
 # convert the string to binary format
@@ -872,7 +870,7 @@ I decrypted the secret code, and the police have accepted my information and now
 ## Acknowledgement
 ---
 
-If it is still not obvious, let me clarify that the above story is fictitious, and any events mentioned above never happened. However, I am grateful to Khan Academy for this puzzle, which I recently learned, was released in 2014. All the images provided as clues are from Khan Academy, and they deserve full credit for those images.
+If it is still not obvious, let me clarify that the above story is fictitious, and any events mentioned above never happened. I am grateful to Khan Academy for this puzzle, which I recently learned, was released in 2014. All the images provided as clues are from Khan Academy, and they deserve full credit for those images.
 
 I accidentally stumbled upon this puzzle while learning cryptography. Some of the puzzles were very difficult for me. Thanks to Khan Academy, I recently learned about the frequency analysis of a message and its role in encryption. I learned several encryption techniques while doing this challenge that I did not know before. I would have been lost without some clues provided by the challenge and the community discussion in the comments.
 
