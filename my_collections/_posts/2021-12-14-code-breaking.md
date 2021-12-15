@@ -11,10 +11,12 @@ One cloudy afternoon, while walking down the street, I saw an object tossed out 
 
 Mysteries are always intriguing. So, I was thrilled when I found a 'stop a bank robbery' code-breaking challenge on Khan Academy. I have been learning maths from Khan Academy for a long time. Recently, I started learning about Cryptography and came across a fantastic code-breaking challenge. This blog outlines the process of decrypting secret messages with the help of a computer programming language called Python.
 
-
-**<i class="bi bi-exclamation-triangle-fill"></i> Spoiler Alert!**
-Following this, there are going to be spoilers to the puzzles. So, if you want to solve this on your own, I highly recommend you to go to [Khan Academy](https://www.khanacademy.org/computing/computer-science/cryptography/cryptochallenge/a/cryptochallenge-introduction){:class="alert-link"}{:target="_blank"} to solve these puzzles. But, if you want to read a mystery blog and find out how to do cryptanalysis, please read ahead.
-{:class="alert alert-danger"}
+<div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill"></i> Spoiler Alert!</h4>
+    <p>Following this, there are going to be spoilers to the puzzles. So, if you want to solve this on your own, I highly recommend you to go to <a href="https://www.khanacademy.org/computing/computer-science/cryptography/cryptochallenge/a/cryptochallenge-introduction" class="alert-link" target="_blank">Khan Academy</a> to solve these puzzles</p>
+    <hr>
+    <p class="mb-0">You may read ahead if you want to read a mystery blog and find out how to do cryptanalysis or are curious about code-breaking.</p>
+</div>
 
 ## Chapter 1: The discovery
 ---
@@ -103,8 +105,9 @@ In the English language, every paragraph has a frequency of letters used. This f
 
 {% include image.html url="/portfolio/assets/images/blogs/cryptography/english_freq.png" description="<strong>Fig. 1</strong>. Frequency distribution of letters in the English language" %}
 
-> You may want to use python packages such as Matplotlib and Jupyter Notebook to make coding easier for you.
-{:class="alert alert-info"}
+<div class="alert alert-info" role="alert">
+  You may want to use python packages such as <a href="https://matplotlib.org/" class="alert-link" target="_blank">Matplotlib</a> and <a href="https://jupyter.org/" class="alert-link" target="_blank">Jupyter Notebook</a> to make coding easier for you.
+</div>
 
 ###### Import necessary python packages
 {% highlight python linenos %}
@@ -653,7 +656,7 @@ I found a newspaper in the safe house where I observed that every consonant was 
 
 ```
 Brilliant driver
-001001000 001010
+001001100 001010
 ```
 
 {% include image.html url="/portfolio/assets/images/blogs/cryptography/newspaper.jpg" description="<strong>Fig. 9</strong>. Newspaper found in the bag" %}
@@ -677,7 +680,7 @@ have mr baskin run us through his thinking on dividend stocks which
 are a big part of the portfolios his firm puts together
 ```
 
-We must encode the text from fig 9 to its binary form. We can use the following code to accomplish this task:
+We must encode the text from *Fig. 9* to its binary form. We can use the following code to accomplish this task:
 
 We remove the white spaces
 {% highlight python linenos %}
@@ -717,11 +720,31 @@ We should get the following output:
 
 ##### XOR
 
-{% include image.html url="/portfolio/assets/images/blogs/cryptography/encryption_steps.jpg" description="<strong>Fig. 10</strong>. Encryption steps" %}
-
 The second step in the encryption process, as shown in *Fig. 10* highlighted using padding from a newspaper article to encrypt a binary message. In the second step, we see two binary sets of binary numbers on either side of the encryption. When we look closer, we find that a bitwise XOR operation with the newspaper padding reverts the binary sequence to its pre-encryption state.
 
-We perform the bitwise XOR operation of the binary sequence from the angles and the newspaper article as follows:
+{% include image.html url="/portfolio/assets/images/blogs/cryptography/encryption_steps.jpg" description="<strong>Fig. 10</strong>. Encryption steps" %}
+
+Following is an example of bitwise `XOR` operation:
+
+|  A  |  B  | A xor B|
+|:---:|:---:|:------:|
+|  0  |  0  |    0   |
+|  0  |  1  |    1   |
+|  1  |  0  |    1   |
+|  1  |  1  |    0   |
+{:class="table table-sm table-bordered"}
+
+Now, if we perform the operation of `(A xor B) xor B` with get the result back to column `A` as follows:
+
+|A xor B|  B  |(A xor B) xor B = A|
+|:-----:|:---:|:------:|
+|   0   |  0  |    0   |
+|   1   |  1  |    0   |
+|   1   |  0  |    1   |
+|   0   |  1  |    1   |
+{:class="table table-sm table-bordered"}
+
+Therefore, performing an `xor` operation on the final message with the newspaper padding will result in the message We perform the bitwise XOR operation of the binary sequence from the angles and the newspaper article as follows:
 
 {% highlight python linenos %}
 # convert the string to binary format
@@ -852,6 +875,8 @@ I decrypted the secret code, and the police have accepted my information and now
 If it is still not obvious, let me clarify that the above story is fictitious, and any events mentioned above never happened. However, I am grateful to Khan Academy for this puzzle, which I recently learned, was released in 2014. All the images provided as clues are from Khan Academy, and they deserve full credit for those images.
 
 I accidentally stumbled upon this puzzle while learning cryptography. Some of the puzzles were very difficult for me. Thanks to Khan Academy, I recently learned about the frequency analysis of a message and its role in encryption. I learned several encryption techniques while doing this challenge that I did not know before. I would have been lost without some clues provided by the challenge and the community discussion in the comments.
+
+This blog post is not sponsored by any organisations or companies mentioned here. Khan Academy is a non-profit organisation aiming to create online tools that help educate students, and I greatly appreciate this organisation and their work.
 
 #### Image credit
 ---
