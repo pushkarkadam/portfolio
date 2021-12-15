@@ -44,6 +44,10 @@ defaults:
         type: "categories"
       values:
         layout: "category"
+    - scope:
+        path: "assets/images"
+      values:
+        image: true
 
 baseurl: /portfolio
 url: "https://pushkarkadam.github.io"
