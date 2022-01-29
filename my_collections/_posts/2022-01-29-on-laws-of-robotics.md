@@ -28,7 +28,7 @@ She heard the door open. The sound of the footsteps on the wooden floor was not 
 
 "You love your long hairs, don't you?", chuckled Xeny while playing with a strand of her short blond hair. "Well, I have never seen you alone. You always have R. Jindaer Florin with you, don't you?"
 
-"R. Jindaer Florin? Xeny, you know I don't like using *that* prefix for Jindaer." Zophia got up and straightened her long brown skirt. She pulled up the sleeves upto her elbow of her black coloured upper garment which had a collar that covered her neck up to her chin. She looked at Xeny's face shining bright from the light coming from the hearth. *Xeny is dexterous, poised, and beautiful beyond measure*. Zophia glanced in her deep blue eyes and asked, "Xeny, who are you?"
+"R. Jindaer Florin? Xeny, you know I don't like using *that* prefix for Jindaer." Zophia got up and straightened her long brown skirt. She pulled up the sleeves upto her elbow of her black coloured upper garment which had a close fitted collar that covered her neck. She looked at Xeny's face shining bright from the light coming from the hearth. *Xeny is dexterous, poised, and beautiful beyond measure*. Zophia glanced in her deep blue eyes and asked, "Xeny, who are you?"
 
 "You know who I am", answered Xeny. Her comely smile spanned her face while her deep blue eyes pierced Zophia's dark brown eyes.
 
@@ -37,12 +37,12 @@ She heard the door open. The sound of the footsteps on the wooden floor was not 
 
 "The modification of the three laws?", asked Xeny.
 
-"Yes." Zophia pulled down her sleeves to cover her arms up to her wrists and untied her long black hair which flowed on her back with the ends almost reaching her waist.
+"Uh...yes." *I never told her about modification*. Zophia pulled down her sleeves of her upper garment to cover her arms up to her wrists and untied her long black hair which flowed on her back with the ends almost reaching her waist.
 *I should have asked Jindaer to get my hair clip from the bungalow instead of making him stand outside the cabin. HIM*. Zophia smirked.
-She started walking to the door. *Yes, I could have asked Jindaer to get my hair clip from the bungalow. But then, who would have protected me. Then, I would really be alone. I don't want to be alone*.
+She started walking to the door. *Yes, I could have asked Jindaer to get my hair clip from the bungalow. But then, who would have protected me? I would really be alone. I don't want to be alone*.
 
 Zophia opened the door and as she stood there thinking, she turned back to see Xeny still sitting on the wooden chair, facing the hearth.
-"Xeny, will you come with me to the Bureau tomorrow?", asked Zophia.
+"Xeny, will you accompany me to the Bureau tomorrow?", asked Zophia.
 
 "Yes, I will", Xeny answered while her back still faced Zophia.
 
@@ -52,7 +52,7 @@ She looked at the closed door. *I know who you are, Xeny. That Spacer. He is the
 She interlocked her arm with Jindaer's arm while they walked to her bungalow. "Jindaer, I know I can trust you", she whispered.
 *I want my Jindaer to protect me. To obey me. To protect himself. The three laws. But what lies beyond the three laws?*
 
-They entered the bungalow. Jindaer separated from Zophia and walked to one of the nine niche in her main room.
+They entered the bungalow. Jindaer separated from Zophia and walked to one of the nine niches in her main room.
 Zophia looked at Jindaer who stood quietly in the niche waiting for her orders. *R. Jindaer Florin, I want you to protect me, obey me, and protect yourself. I know who you are, Xeny. I know what you are.*
 
 ---
