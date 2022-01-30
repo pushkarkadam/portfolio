@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "On the laws of robotics"
+title:  "On the Laws of Robotics"
 date:   2022-01-29 01:00:00 +1100
 categories: [essay]
 author: Pushkar Kadam
@@ -10,9 +10,9 @@ author: Pushkar Kadam
 The flames from the hearth illuminated only a part of the cabin. She could see a faint shadow in the niche where Jindaer stood.
 *What lies beyond the three laws?* She was deep in her thoughts. *I want to be alone for a while.*
 "Jindaer, I wish to be alone for a while. Please stand outside the door of the cabin", said Zophia.
-*Please. A strange word. Dates back from the days when humans asked each other for small favours. For some reason it has stuck with speech. With Jindaer gone, I will be alone. But, what does being alone really mean?*
+*Please. A strange word. Dates back from the days when humans asked each other for small favours. For some reason that word had stuck with speech. With Jindaer gone, I will be alone. But, what does being alone really mean?*
 
-Zophia heard the creaky sound of the hinges of the wooden door as Jindaer walked out and there there was a sound of the door slamming.
+Zophia heard the creaky sound of the hinges of the wooden door. When Jindaer walked out, she heard the sound of the door slamming.
 *Not even a nod of acknowledgement. They simply obey. Thousands of them working on my estate and millions on this planet. They exist to protect me, to obey my orders, and to protect themselves.*
 She straightened up on her wooden chair. Her arms tightly clunged to the armrest. *How have I got used to this lifestyle?
 When did the obsession with the archaic things begin? The wooden cabin. The hearth. The chair. The long skirt. The long hairs tied with an ancient hair clip. That Spacer. He is the one responsible.*
@@ -49,10 +49,155 @@ Zophia opened the door and as she stood there thinking, she turned back to see X
 Zophia shut the door. She saw Jindaer standing right in front of the door of the cabin. *He stands exactly where I ordered him to stand. Protecting me. Obeying me. Protecting himself*.
 She looked at the closed door. *I know who you are, Xeny. That Spacer. He is the one responsible*.
 
-She interlocked her arm with Jindaer's arm while they walked to her bungalow. "Jindaer, I know I can trust you", she whispered.
+Zophia interlocked her right arm with Jindaer's left arm while they walked to her bungalow. "Jindaer, I know I can trust you", she whispered.
 *I want my Jindaer to protect me. To obey me. To protect himself. The three laws. But what lies beyond the three laws?*
 
 They entered the bungalow. Jindaer separated from Zophia and walked to one of the nine niches in her main room.
 Zophia looked at Jindaer who stood quietly in the niche waiting for her orders. *R. Jindaer Florin, I want you to protect me, obey me, and protect yourself. I know who you are, Xeny. I know what you are.*
 
+*-Pushkar*
+
+## Three Laws of Robotics
 ---
+
+I hope you enjoyed the story in the beginning of this blog post. It is my own story inspired by Asimov's robot stories.
+Isaac Asimov's stories on robots have been my first introduction to the robotics science fiction literature. 
+Asimov's robots are bipeds resembling humans  and programmed by the three laws of robotics.
+In his stories, the three laws of robotics are the safety mechanism that humans built in the robots to ensure the safety of the humans.
+The three laws paint a utopian picture of how humans and robots could co-exist peacefully in a society with the latter serving the former.
+Despite the safety feature provided by the three laws of robotics, Asimov often used these three laws to create a conflict in the plot of his stories.
+
+>Three laws of robotics:
+1. A robot may not injure a human being or through inaction, allow a human being to come to harm.
+2. A robot must obey the orders given it by human beings except where such orders would not conflict with the first law.
+3. A robot must protect its own existence as long as such protection does not conflict with the first or second law.
+
+While Asimov's robots worked within the parameters of the three laws our current robots are mostly non-biped and are design to perform continous repetitive tasks.
+However, if we were to create humanoid robots embedded with artificial intelligence (AI), then how would the three laws work?
+
+How do we embed the three laws in our robots? I have often asked myself this question. Lately, I have given some thoughts to it.
+This blog post will be less technical and more of an essay on the three laws of robotics and going down the metaphorical rabbit hole with some philosophical questions of a functionaing three laws safe robot.
+
+## The First Law
+---
+
+>A robot may not injure a human being or through inaction, allow a human being to come to harm.
+{:class='blog-blockquote'}
+
+One of the fascinating part I like about implementing these laws is how do we convert these statements into something that a computer or a robot can understand.
+The first law statement raises questions such as, *What is an injury?*, *What does inaction mean?* and *How do we define harm?*
+But, the most important question, *How do we define a human being?*
+
+Of course, a dictionary would give a good definition to all these terms. But, upto what extent should we extend our search parameters.
+For example, when a *human being* is about to be injured or harmed a robot must not allow this to happen.
+Injury and harm comes in various types.  Humans are capable of harming other human beings and at the same time capable of harming themselves.
+*Human beings* can harm themselves voluntarily in the short term by playing sport or long term by consuming illicit substances.
+But, isn't procrastination a harmful behaviour too? Aren't some thoughts harmful as well?
+
+I think we can simplify this problem. We consider our robots have visual recepters a.k.a. eyes and the robot AI can process all the images.
+We can train the robot to identify and interpret certain human behaviours as harmful.
+We can also train the robot to continuously monitor the environment to detect any potential harm to any human nearby.
+
+{% highlight python %}
+if(human_is_at_harm):
+    save_human()
+{% endhighlight %} 
+
+I am sure saving a human being will not be as simple as the code mentioned above. 
+Also, we are completely ignoring the robot kinematics which relates to the motion of all the machine component in the robot joints that allows the robot to reach a particular location.
+This raises more questions than it answers. This is because we still think robots as these machines with multiple actuators on their joints allowing the robots to more.
+*Human beings* do not have motors in our elbow. So, what if we invent a series of artificial fibres for robot body that is capable of movement by electric currents.
+
+>Biology is superficial, intelligence is artificial - Grimes (We Appreciate Power from the album Miss Anthropocene)
+{:class='blog-blockquote'}
+
+## The Second Law
+---
+
+>A robot must obey the orders given it by human beings except where such orders would not conflict with the first law.
+{:class='blog-blockquote'}
+
+I like this law as it provides a safety feature where a robot cannot be ordered to harm another *human being* because according to the first law a robot should not injure a *human being*.
+
+*How do we implement the second law?* We train the robot AI with speech recognition. 
+We use natural language processing (NLP) where we train the AI to understand speech and context of the speech.
+This will allow the robot AI to correctly comprehend the human order.
+Though, the robot AI must be extensively trained so that a human does not trick a robot with unconventional commands which would eventually cause harm to a human being.
+
+{% highlight python %}
+
+def obey(human_order):
+    if (human_harmed(human_order)):
+        do_nothing()
+    else:
+        execute_order(human_order)
+{% endhighlight %}
+
+## The Third Law
+---
+
+>A robot must protect its own existence as long as such protection does not conflict with the first or second law
+{:class='blog-blockquote'}
+
+So, if you order the robot to destroy itself, the second law will accept the order, check if the order causes the harm to the *human being* or to itself.
+If either of the condition is true then the robot will not execute any of the order. Which means the code in the Second law section must be modified.
+
+{% highlight python %}
+
+def obey(human_order):
+    if (human_harmed(human_order) or self_harmed(human_order):
+        do_nothing()
+    else:
+        execute_order(human_order)
+
+{% endhighlight %}
+
+But what if the robot seems the harm coming to itself. So, again the robot must keep on monitoring the environment and process millions of images to identify a threat to the human and to itself.
+
+## The Zeroth Law 
+
+>A robot may not harm humanity, or, by inaction, allow humanity to come to harm.
+{:class='blog-blockquote'}
+
+The zeroth law supercedes all the three laws.
+In Asimov's stories, robots themselves developed the zeroth law after identifying that humanity is the most important component of the galaxy.
+So, by the zeroth law, if the robots can save human species on a whole, sacrificing few humans would be acceptable.
+
+*How do we implement the zeroth law?* I think we should let the robot's positronic brain develop this on their own.
+
+## Some Final Thoughts
+---
+
+In Asimov's stories humans become very much reliant upon robots.
+*Human beings* do not go outside without having atleast one of their robots with them.
+Robots become a part of human life.
+This is not much different from our habits of carrying our smartphones with us.
+If we compare robots to smartphones, should each robot have unique identity?
+When we buy a new smartphone, we enter our account credentials and the new smartphone picks everything from the old smartphone that was backed up a company's cloud storage.
+The new smartphone is new in physical form, but not new to know all that we want on our smartphones.
+Should robots be like these smartphones? They live with you while they back everything to the cloud of the company that sells you the robot,
+or should robots be unique with their positronic brains saving experiences unique to them.
+
+We train AI by collecting data. The trained AI models are then updated to all our devices and smartphones.
+Should robots be trained in basic operations before they are dispatched? or should they be collectively trained by the data collected by each robot?
+Earlier, we tried to simplify the logic of the three laws of robotics. 
+But, if we were to train a neural network of the robot's positronic brain, then it will be completely unknown to us how the logic of the three laws exists in the robot's positronic brain.
+With the unknown logic, our only assurance will be to experiment with different scenarios to check if the robot is three laws safe. 
+Once we have done enough experimentations, then we can copy the structure of the positronic brain to other robots.
+
+Asimov also introduced humaniform robots which are exactly like humans in appearance.
+Eventually their programming becomes so advanced that they start to define themselves as *human beings*.
+*How would the humaniform robots work?* I think this question will involve going further deep down the metaphorical rabbit hole.
+
+## Author's note
+---
+
+This was a bit extensive essay/blog/whatever_this_is. 
+I know that I am a bit naive in the considering how we would implement the three laws.
+I can see the future version of me laughing over my naivety over this topic.
+There are several questions to answer when developing a humanoid robot.
+One question that I often avoid is: "WHY?"
+The mathematics involved in the kinematics of robotics is much more complex to explain in this blog.
+Also, I do not know the matematics involved in programming the movement of a humanoid biped robot, yet.
+If you, the reader, have made it this far in the blog, I am grateful to you for dedicating your time in reading some of my thoughts.
+   
