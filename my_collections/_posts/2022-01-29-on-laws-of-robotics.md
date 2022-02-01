@@ -113,15 +113,15 @@ This raises more questions than it answers. This is because we still think of ro
 ## The Second Law
 ---
 
->A robot must obey the orders given it by human beings except where such orders would not conflict with the first law.
+>A robot must obey the orders given by human beings except where such orders would not conflict with the first law.
 {:class='blog-blockquote'}
 
-I like this law as it provides a safety feature where a robot cannot be ordered to harm another *human being* because according to the first law a robot should not injure a *human being*.
+I like this law as it provides a safety feature where a robot cannot be ordered to harm another *human being* because, according to the first law, a robot should not injure a *human being*.
 
 *How do we implement the second law?* We train the robot AI with speech recognition.
-We use natural language processing (NLP) where we train the AI to understand speech and context of the speech.
+We use natural language processing (NLP), where we train the AI to understand the speech and the context.
 This will allow the robot AI to correctly comprehend the human order.
-Though, the robot AI must be extensively trained so that a human does not trick a robot with unconventional commands which would eventually cause harm to a human being.
+The robot AI must be extensively trained so that a human does not trick a robot with unconventional commands, which would eventually cause harm to a human being.
 
 {% highlight python %}
 
