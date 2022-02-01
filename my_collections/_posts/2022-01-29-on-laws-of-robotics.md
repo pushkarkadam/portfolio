@@ -155,14 +155,14 @@ But what if the robot seems the harm coming to itself. So, again, the robot must
 
 ## The Zeroth Law
 
->A robot may not harm humanity, or, by inaction, allow humanity to come to harm.
+>A robot may not harm humanity or, by inaction, allow humanity to come to harm.
 {:class='blog-blockquote'}
 
-The zeroth law supercedes all the three laws.
-In Asimov's stories, robots themselves developed the zeroth law after identifying that humanity is the most important component of the galaxy.
-So, by the zeroth law, if the robots can save human species on a whole, sacrificing few humans would be acceptable.
+The zeroth law supersedes all three laws.
+In Asimov's stories, robots themselves developed the zeroth law after identifying that humanity is the most essential component of the galaxy.
+So, by the zeroth law, sacrificing few humans would be acceptable if the robots could save the human species as a whole.
 
-*How do we implement the zeroth law?* I think we should let the robot's positronic brain develop this on their own.
+*How do we implement the zeroth law?* I think we should let the robot's positronic brain develop this independently.
 
 ## Some Final Thoughts
 ---
