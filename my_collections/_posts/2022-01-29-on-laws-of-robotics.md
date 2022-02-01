@@ -4,8 +4,6 @@ title:  "On the Laws of Robotics"
 date:   2022-01-29 01:00:00 +1100
 categories: [essay]
 author: Pushkar Kadam
-cover_image: 2022-01-29-cover.jpg
-excerpt: "Isaac Asimov developed the three laws of robotics. I have always been curious about implementing the three laws in real humanoid robots. Here's a blog post where I outline the possible ways of implementing the three laws while asking several questions regarding the ethics of developing humanoid robots. Bonus story in the beginning."
 ---
 
 *Three laws of Robotics. What lies beyond the three laws?* Zophia often asked herself this question. She was sitting in front of the hearth in a wooden cabin.
@@ -61,6 +59,8 @@ Zophia looked at Jindaer, who stood quietly in the niche, waiting for her orders
 
 ## Three Laws of Robotics
 ---
+
+![robot](/portfolio/assets/images/blogs/2022-01-29-cover.jpg){:class="img-fluid"}
 
 I hope you enjoyed the story at the beginning of this blog post. It is my own story inspired by Asimov's robot stories.
 Isaac Asimov's stories on robots have been my first introduction to robotics science fiction literature.
