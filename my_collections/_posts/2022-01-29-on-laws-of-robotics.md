@@ -60,23 +60,23 @@ Zophia looked at Jindaer, who stood quietly in the niche, waiting for her orders
 ## Three Laws of Robotics
 ---
 
-I hope you enjoyed the story in the beginning of this blog post. It is my own story inspired by Asimov's robot stories.
-Isaac Asimov's stories on robots have been my first introduction to the robotics science fiction literature.
-Asimov's robots are bipeds resembling humans  and programmed by the three laws of robotics.
+I hope you enjoyed the story at the beginning of this blog post. It is my own story inspired by Asimov's robot stories.
+Isaac Asimov's stories on robots have been my first introduction to robotics science fiction literature.
+Asimov's robots are bipeds resembling humans and programmed by the three laws of robotics.
 In his stories, the three laws of robotics are the safety mechanism that humans built in the robots to ensure the safety of the humans.
-The three laws paint a utopian picture of how humans and robots could co-exist peacefully in a society with the latter serving the former.
+The three laws paint a utopian picture of how humans and robots could co-exist peacefully in a society, with the latter serving the former.
 Despite the safety feature provided by the three laws of robotics, Asimov often used these three laws to create a conflict in the plot of his stories.
 
 >Three laws of robotics:
-1. A robot may not injure a human being or through inaction, allow a human being to come to harm.
-2. A robot must obey the orders given it by human beings except where such orders would not conflict with the first law.
+1. A robot may not injure a human being or, through inaction, allow a human being to come to harm.
+2. A robot must obey the orders given by human beings except where such orders would not conflict with the first law.
 3. A robot must protect its own existence as long as such protection does not conflict with the first or second law.
 
-While Asimov's robots worked within the parameters of the three laws our current robots are mostly non-biped and are design to perform continous repetitive tasks.
-However, if we were to create humanoid robots embedded with artificial intelligence (AI), then how would the three laws work?
+While Asimov's robots worked within the parameters of the three laws, our current robots are mostly non-biped and are designed to perform continuous repetitive tasks.
+However, how would the three laws work if we were to create humanoid robots embedded with artificial intelligence (AI)?
 
-How do we embed the three laws in our robots? I have often asked myself this question. Lately, I have given some thoughts to it.
-This blog post will be less technical and more of an essay on the three laws of robotics and going down the metaphorical rabbit hole with some philosophical questions of a functionaing three laws safe robot.
+How do we embed the three laws in our robots? I have often asked myself this question. Lately, I have given some thought to it.
+This blog post will be less technical and more of an essay on the three laws of robotics and going down the metaphorical rabbit hole with some philosophical questions of a functioning three laws safe robot.
 
 ## The First Law
 ---
