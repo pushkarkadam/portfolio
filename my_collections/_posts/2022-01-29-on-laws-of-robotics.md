@@ -167,35 +167,35 @@ So, by the zeroth law, sacrificing few humans would be acceptable if the robots 
 ## Some Final Thoughts
 ---
 
-In Asimov's stories humans become very much reliant upon robots.
-*Human beings* do not go outside without having atleast one of their robots with them.
-Robots become a part of human life.
+In Asimov's stories, humans become very much reliant upon robots.
+*Human beings* do not go outside without having at least one of their robots with them.
+Robots have become a part of human life.
 This is not much different from our habits of carrying our smartphones with us.
-If we compare robots to smartphones, should each robot have unique identity?
-When we buy a new smartphone, we enter our account credentials and the new smartphone picks everything from the old smartphone that was backed up a company's cloud storage.
+If we compare robots to smartphones, should each robot have a unique identity?
+When we buy a new smartphone, we enter our account credentials, and the new smartphone picks everything from the old smartphone backed up by a company's cloud storage.
 The new smartphone is new in physical form, but not new to know all that we want on our smartphones.
-Should robots be like these smartphones? They live with you while they back everything to the cloud of the company that sells you the robot,
+Should robots be like these smartphones? They live with you while they back everything to the company's cloud that sells you the robot,
 or should robots be unique with their positronic brains saving experiences unique to them.
 
 We train AI by collecting data. The trained AI models are then updated to all our devices and smartphones.
 Should robots be trained in basic operations before they are dispatched? or should they be collectively trained by the data collected by each robot?
 Earlier, we tried to simplify the logic of the three laws of robotics.
-But, if we were to train a neural network of the robot's positronic brain, then it will be completely unknown to us how the logic of the three laws exists in the robot's positronic brain.
-With the unknown logic, our only assurance will be to experiment with different scenarios to check if the robot is three laws safe.
-Once we have done enough experimentations, then we can copy the structure of the positronic brain to other robots.
+But, if we were to train a neural network of the robot's positronic brain, then it would be utterly unknown to us how the logic of the three laws exists in the robot's positronic brain.
+Our only assurance will be to experiment with different scenarios to check if the robot is three laws safe with the unknown logic.
+Once we have done enough experiments, we can copy the structure of the positronic brain to other robots.
 
-Asimov also introduced humaniform robots which are exactly like humans in appearance.
-Eventually their programming becomes so advanced that they start to define themselves as *human beings*.
+Asimov also introduced humaniform robots, which are exactly like humans in appearance.
+Eventually, their programming becomes so advanced that they define themselves as *human beings*.
 *How would the humaniform robots work?* I think this question will involve going further deep down the metaphorical rabbit hole.
 
 ## Author's note
 ---
 
 This was a bit extensive essay/blog/whatever_this_is.
-I know that I am a bit naive in the considering how we would implement the three laws.
+I know that I am a bit naive in considering implementing the three laws.
 I can see the future version of me laughing over my naivety over this topic.
 There are several questions to answer when developing a humanoid robot.
 One question that I often avoid is: "WHY?"
 The mathematics involved in the kinematics of robotics is much more complex to explain in this blog.
-Also, I do not know the matematics involved in programming the movement of a humanoid biped robot, yet.
-If you, the reader, have made it this far in the blog, I am grateful to you for dedicating your time in reading some of my thoughts.
+Also, I do not know the mathematics involved in programming the movement of a humanoid biped robot yet.
+If you, the reader, have made it this far in the blog, I am grateful to you for dedicating your time to reading some of my thoughts.
