@@ -81,20 +81,20 @@ This blog post will be less technical and more of an essay on the three laws of 
 ## The First Law
 ---
 
->A robot may not injure a human being or through inaction, allow a human being to come to harm.
+>A robot may not injure a human being or, through inaction, allow a human being to come to harm.
 {:class='blog-blockquote'}
 
-One of the fascinating part I like about implementing these laws is how do we convert these statements into something that a computer or a robot can understand.
+One of the fascinating parts I like about implementing these laws is how we convert these statements into something that a computer or a robot can understand.
 The first law statement raises questions such as, *What is an injury?*, *What does inaction mean?* and *How do we define harm?*
-But, the most important question, *How do we define a human being?*
+But, the most crucial question, *How do we define a human being?*
 
-Of course, a dictionary would give a good definition to all these terms. But, upto what extent should we extend our search parameters.
-For example, when a *human being* is about to be injured or harmed a robot must not allow this to happen.
-Injury and harm comes in various types.  Humans are capable of harming other human beings and at the same time capable of harming themselves.
+Of course, a dictionary would define all these terms well. But, up to what extent should we extend our search parameters.
+For example, when a *human being* is about to be injured or harmed, a robot must not allow this to happen.
+Injury and harm come in various types. Humans are capable of harming other human beings and, at the same time, capable of harming themselves.
 *Human beings* can harm themselves voluntarily in the short term by playing sport or long term by consuming illicit substances.
-But, isn't procrastination a harmful behaviour too? Aren't some thoughts harmful as well?
+But isn't procrastination a harmful behaviour too? Aren't some thoughts harmful as well?
 
-I think we can simplify this problem. We consider our robots have visual recepters a.k.a. eyes and the robot AI can process all the images.
+I think we can simplify this problem. We consider our robots have visual receptors, a.k.a. eyes, and the robot AI can process all the images.
 We can train the robot to identify and interpret certain human behaviours as harmful.
 We can also train the robot to continuously monitor the environment to detect any potential harm to any human nearby.
 
@@ -104,13 +104,12 @@ if(human_is_at_harm):
 {% endhighlight %}
 
 I am sure saving a human being will not be as simple as the code mentioned above.
-Also, we are completely ignoring the robot kinematics which relates to the motion of all the machine component in the robot joints that allows the robot to reach a particular location.
-This raises more questions than it answers. This is because we still think robots as these machines with multiple actuators on their joints allowing the robots to more.
-*Human beings* do not have motors in our elbow. So, what if we invent a series of artificial fibres for robot body that is capable of movement by electric currents.
+Also, we completely ignore the robot kinematics, which relates to the motion of all the machine components in the robot joints that allow the robot to reach a particular location.
+This raises more questions than it answers. This is because we still think of robots with multiple actuators on their joints, allowing them to do more.
+*Human beings* do not have motors in our elbow. So, what if we invent a series of artificial fibres for a robot body capable of movement by electric currents.
 
 >Biology is superficial, intelligence is artificial - Grimes (We Appreciate Power from the album Miss Anthropocene)
 {:class='blog-blockquote'}
-
 ## The Second Law
 ---
 
