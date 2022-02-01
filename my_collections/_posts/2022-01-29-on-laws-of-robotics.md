@@ -7,53 +7,53 @@ author: Pushkar Kadam
 ---
 
 *Three laws of Robotics. What lies beyond the three laws?* Zophia often asked herself this question. She was sitting in front of the hearth in a wooden cabin.
-The flames from the hearth illuminated only a part of the cabin. She could see a faint shadow in the niche where Jindaer stood.
+The flames from the hearth illuminated only a part of the cabin. Zophia could see a faint shadow in the niche where Jindaer stood.
 *What lies beyond the three laws?* She was deep in her thoughts. *I want to be alone for a while.*
 "Jindaer, I wish to be alone for a while. Please stand outside the door of the cabin", said Zophia.
-*Please. A strange word. Dates back from the days when humans asked each other for small favours. For some reason that word had stuck with speech. With Jindaer gone, I will be alone. But, what does being alone really mean?*
+*Please. A strange word. It dates back to when humans asked each other for small favours. For some reason, that word had stuck with speech. With Jindaer gone, I will be alone. But, what does being alone really mean?*
 
 Zophia heard the creaky sound of the hinges of the wooden door. When Jindaer walked out, she heard the sound of the door slamming.
 *Not even a nod of acknowledgement. They simply obey. Thousands of them working on my estate and millions on this planet. They exist to protect me, to obey my orders, and to protect themselves.*
-She straightened up on her wooden chair. Her arms tightly clunged to the armrest. *How have I got used to this lifestyle?
-When did the obsession with the archaic things begin? The wooden cabin. The hearth. The chair. The long skirt. The long hairs tied with an ancient hair clip. That Spacer. He is the one responsible.*
+She straightened up on her wooden chair. Her arms tightly clung to the armrest. *How have I got used to this lifestyle?
+When did the obsession with archaic things begin? The wooden cabin. The hearth. The chair. The long skirt. The long hairs, tied with an ancient hair clip. That Spacer. He is the one responsible.*
 
 She heard the door open. The sound of the footsteps on the wooden floor was not loud enough to disturb her thoughts.
 "Still thinking?" said a soft melodious voice.
 "Xeny, have you ever considered what happens when you die?", asked Zophia while still staring at the hearth.
-"I choose not think about it", answered Xeny. *You choose not to think about it or you cannot think about it. Such a cold response. Am I still alone?*
+"I choose not to think about it", answered Xeny. *You choose not to think about it, or you cannot think about it. Such a cold response. Am I still alone?*
 
-"It is very rare to see someone alone", said Xeny.
+"It is scarce to see someone alone", said Xeny.
 
-"Alone?", Zophia trembled. "I...uh...am am always alone." Zophia adjusted her strands of her long black hair over her ears and combed them with her fingers to her back and tied them in a knot.
+"Alone?", Zophia trembled. "I...uh...am... am always alone." Zophia adjusted the strands of her long black hair over her ears, combed them with her fingers to her back, and tied them in a knot.
 
-"You love your long hairs, don't you?", chuckled Xeny while playing with a strand of her short blond hair. "Well, I have never seen you alone. You always have R. Jindaer Florin with you, don't you?"
+"You love your long hairs, don't you?" chuckled Xeny while playing with a strand of her short blond hair. "Well, I have never seen you alone. You always have R. Jindaer Florin with you, don't you?"
 
-"R. Jindaer Florin? Xeny, you know I don't like using *that* prefix for Jindaer." Zophia got up and straightened her long brown skirt. She pulled up the sleeves upto her elbow of her black coloured upper garment which had a close fitted collar that covered her neck. She looked at Xeny's face shining bright from the light coming from the hearth. *Xeny is dexterous, poised, and beautiful beyond measure*. Zophia glanced in her deep blue eyes and asked, "Xeny, who are you?"
+"R. Jindaer Florin? Xeny, you know I don't like using *that* prefix for Jindaer." Zophia got up and straightened her long brown skirt. She pulled up the sleeves up to the elbow of her black coloured upper garment, which had a close-fitted collar that covered her neck. She looked at Xeny's face shining brightly from the light coming from the hearth. *Xeny is dexterous, poised, and beautiful beyond measure*. Zophia glanced in her deep blue eyes and asked, "Xeny, who are you?"
 
 "You know who I am", answered Xeny. Her comely smile spanned her face while her deep blue eyes pierced Zophia's dark brown eyes.
 
-*Xeny answers in riddles. She always does that. Her eyes show that she knows what I am thinking. That Spacer. He is the one responsible.* Zophia did not say anything. *I know who you are, Xeny. But, I hope I am wrong. That Spacer. He is the one responsible*.
+*Xeny answers in riddles. She always does that. Her eyes show that she knows what I am thinking. That Spacer. He is the one responsible.* Zophia did not say anything. *I know who you are, Xeny. But I hope I am wrong. That Spacer. He is the one responsible*.
 "I think I am tired. I have an appointment with the Bureau tomorrow. I will need some rest before I present my research."
 
-"The modification of the three laws?", asked Xeny.
+"The modifications of the three laws?" asked Xeny.
 
-"Uh...yes." *I never told her about modification*. Zophia pulled down her sleeves of her upper garment to cover her arms up to her wrists and untied her long black hair which flowed on her back with the ends almost reaching her waist.
+"Uh...yes." *I never told her about the modifications*. Zophia pulled down the sleeves of her upper garment to cover her arms up to her wrists and untied her long black hair, which flowed on her back with the ends almost reaching her waist.
 *I should have asked Jindaer to get my hair clip from the bungalow instead of making him stand outside the cabin. HIM*. Zophia smirked.
 She started walking to the door. *Yes, I could have asked Jindaer to get my hair clip from the bungalow. But then, who would have protected me? I would really be alone. I don't want to be alone*.
 
-Zophia opened the door and as she stood there thinking, she turned back to see Xeny still sitting on the wooden chair, facing the hearth.
-"Xeny, will you accompany me to the Bureau tomorrow?", asked Zophia.
+Zophia opened the door, and as she stood there thinking, she turned back to see Xeny still sitting on the wooden chair, facing the hearth.
+"Xeny, will you accompany me to the Bureau tomorrow?" asked Zophia.
 
 "Yes, I will", Xeny answered while her back still faced Zophia.
 
-Zophia shut the door. She saw Jindaer standing right in front of the door of the cabin. *He stands exactly where I ordered him to stand. Protecting me. Obeying me. Protecting himself*.
+Zophia shut the door. She saw Jindaer standing right in front of the door of the cabin. *He stands precisely where I ordered him to stand. Protecting me. Obeying me. Protecting himself*.
 She looked at the closed door. *I know who you are, Xeny. That Spacer. He is the one responsible*.
 
-Zophia interlocked her right arm with Jindaer's left arm while they walked to her bungalow. "Jindaer, I know I can trust you", she whispered.
+Zophia interlocked her right arm with Jindaer's left arm while walking to her bungalow. "Jindaer, I know I can trust you", she whispered.
 *I want my Jindaer to protect me. To obey me. To protect himself. The three laws. But what lies beyond the three laws?*
 
 They entered the bungalow. Jindaer separated from Zophia and walked to one of the nine niches in her main room.
-Zophia looked at Jindaer who stood quietly in the niche waiting for her orders. *R. Jindaer Florin, I want you to protect me, obey me, and protect yourself. I know who you are, Xeny. I know what you are.*
+Zophia looked at Jindaer, who stood quietly in the niche, waiting for her orders. *R. Jindaer Florin, I want you to protect me, obey me, and protect yourself. I know who you are, Xeny. I know what you are.*
 
 *-Pushkar*
 
@@ -61,7 +61,7 @@ Zophia looked at Jindaer who stood quietly in the niche waiting for her orders. 
 ---
 
 I hope you enjoyed the story in the beginning of this blog post. It is my own story inspired by Asimov's robot stories.
-Isaac Asimov's stories on robots have been my first introduction to the robotics science fiction literature. 
+Isaac Asimov's stories on robots have been my first introduction to the robotics science fiction literature.
 Asimov's robots are bipeds resembling humans  and programmed by the three laws of robotics.
 In his stories, the three laws of robotics are the safety mechanism that humans built in the robots to ensure the safety of the humans.
 The three laws paint a utopian picture of how humans and robots could co-exist peacefully in a society with the latter serving the former.
@@ -101,9 +101,9 @@ We can also train the robot to continuously monitor the environment to detect an
 {% highlight python %}
 if(human_is_at_harm):
     save_human()
-{% endhighlight %} 
+{% endhighlight %}
 
-I am sure saving a human being will not be as simple as the code mentioned above. 
+I am sure saving a human being will not be as simple as the code mentioned above.
 Also, we are completely ignoring the robot kinematics which relates to the motion of all the machine component in the robot joints that allows the robot to reach a particular location.
 This raises more questions than it answers. This is because we still think robots as these machines with multiple actuators on their joints allowing the robots to more.
 *Human beings* do not have motors in our elbow. So, what if we invent a series of artificial fibres for robot body that is capable of movement by electric currents.
@@ -119,7 +119,7 @@ This raises more questions than it answers. This is because we still think robot
 
 I like this law as it provides a safety feature where a robot cannot be ordered to harm another *human being* because according to the first law a robot should not injure a *human being*.
 
-*How do we implement the second law?* We train the robot AI with speech recognition. 
+*How do we implement the second law?* We train the robot AI with speech recognition.
 We use natural language processing (NLP) where we train the AI to understand speech and context of the speech.
 This will allow the robot AI to correctly comprehend the human order.
 Though, the robot AI must be extensively trained so that a human does not trick a robot with unconventional commands which would eventually cause harm to a human being.
@@ -154,7 +154,7 @@ def obey(human_order):
 
 But what if the robot seems the harm coming to itself. So, again the robot must keep on monitoring the environment and process millions of images to identify a threat to the human and to itself.
 
-## The Zeroth Law 
+## The Zeroth Law
 
 >A robot may not harm humanity, or, by inaction, allow humanity to come to harm.
 {:class='blog-blockquote'}
@@ -180,9 +180,9 @@ or should robots be unique with their positronic brains saving experiences uniqu
 
 We train AI by collecting data. The trained AI models are then updated to all our devices and smartphones.
 Should robots be trained in basic operations before they are dispatched? or should they be collectively trained by the data collected by each robot?
-Earlier, we tried to simplify the logic of the three laws of robotics. 
+Earlier, we tried to simplify the logic of the three laws of robotics.
 But, if we were to train a neural network of the robot's positronic brain, then it will be completely unknown to us how the logic of the three laws exists in the robot's positronic brain.
-With the unknown logic, our only assurance will be to experiment with different scenarios to check if the robot is three laws safe. 
+With the unknown logic, our only assurance will be to experiment with different scenarios to check if the robot is three laws safe.
 Once we have done enough experimentations, then we can copy the structure of the positronic brain to other robots.
 
 Asimov also introduced humaniform robots which are exactly like humans in appearance.
@@ -192,7 +192,7 @@ Eventually their programming becomes so advanced that they start to define thems
 ## Author's note
 ---
 
-This was a bit extensive essay/blog/whatever_this_is. 
+This was a bit extensive essay/blog/whatever_this_is.
 I know that I am a bit naive in the considering how we would implement the three laws.
 I can see the future version of me laughing over my naivety over this topic.
 There are several questions to answer when developing a humanoid robot.
@@ -200,4 +200,3 @@ One question that I often avoid is: "WHY?"
 The mathematics involved in the kinematics of robotics is much more complex to explain in this blog.
 Also, I do not know the matematics involved in programming the movement of a humanoid biped robot, yet.
 If you, the reader, have made it this far in the blog, I am grateful to you for dedicating your time in reading some of my thoughts.
-   
