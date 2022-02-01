@@ -4,6 +4,7 @@ title:  "On the Laws of Robotics"
 date:   2022-01-29 01:00:00 +1100
 categories: [essay]
 author: Pushkar Kadam
+excerpt: "Isaac Asimov developed the three laws of robotics. I have always been curious about implementing the three laws in real humanoid robots. Here's a blog post where I outline the possible ways of implementing the three laws while asking several questions regarding the ethics of developing humanoid robots. Bonus story in the beginning."
 ---
 
 *Three laws of Robotics. What lies beyond the three laws?* Zophia often asked herself this question. She was sitting in front of the hearth in a wooden cabin.
@@ -110,8 +111,11 @@ Also, we completely ignore the robot kinematics, which relates to the motion of 
 This raises more questions than it answers. This is because we still think of robots with multiple actuators on their joints, allowing them to do more.
 *Human beings* do not have motors in our elbow. So, what if we invent a series of artificial fibres for a robot body capable of movement by electric currents.
 
->Biology is superficial, intelligence is artificial - Grimes (We Appreciate Power from the album Miss Anthropocene)
-{:class='blog-blockquote'}
+<blockquote class="blockquote text-center">
+  <p class="mb-0">Biology is superficial, intelligence is artificial.</p>
+  <footer class="blockquote-footer">Grimes in <cite title="We Appreciate Power (Miss Anthropocene)">We Appreciate Power (Miss Anthropocene)</cite></footer>
+</blockquote>
+
 ## The Second Law
 ---
 
@@ -183,7 +187,7 @@ We train AI by collecting data. The trained AI models are then updated to all ou
 Should robots be trained in basic operations before they are dispatched?
 Or should they be collectively trained by the data collected by each robot?
 Earlier, we tried to simplify the logic of the three laws of robotics.
-But, if we were to train a neural network on the robot's positronic brain, then it would be utterly unknown how the logic of the three laws exists in the robot's positronic brain.
+But, if we were to train a neural network on the robot's positronic brain, it would be utterly unknown how the logic of the three laws exists in the robot's positronic brain.
 Our only assurance will be to experiment with different scenarios to check if the robot is three laws safe with the unknown logic.
 Once we have done enough experiments, we can certify the robot to be three laws safe.
 
