@@ -138,8 +138,8 @@ def obey(human_order):
 >A robot must protect its own existence as long as such protection does not conflict with the first or second law
 {:class='blog-blockquote'}
 
-So, if you order the robot to destroy itself, the second law will accept the order, check if the order causes the harm to the *human being* or to itself.
-If either of the condition is true then the robot will not execute any of the order. Which means the code in the Second law section must be modified.
+So, if you order the robot to destroy itself, the second law will accept the order to check if the order causes harm to the *human being* or to itself.
+If either condition is true, the robot will not execute any of the orders. This means the code in the Second law section must be modified.
 
 {% highlight python %}
 
@@ -151,7 +151,7 @@ def obey(human_order):
 
 {% endhighlight %}
 
-But what if the robot seems the harm coming to itself. So, again the robot must keep on monitoring the environment and process millions of images to identify a threat to the human and to itself.
+But what if the robot seems the harm coming to itself. So, again, the robot must monitor the environment and process millions of images to identify a threat to the human and itself.
 
 ## The Zeroth Law
 
