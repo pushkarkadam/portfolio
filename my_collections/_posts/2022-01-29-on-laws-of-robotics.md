@@ -60,6 +60,8 @@ Zophia looked at Jindaer, who stood quietly in the niche, waiting for her orders
 ## Three Laws of Robotics
 ---
 
+![robot](/portfolio/assets/images/blogs/2022-01-29-cover.jpg){:class="img-fluid"}
+
 I hope you enjoyed the story at the beginning of this blog post. It is my own story inspired by Asimov's robot stories.
 Isaac Asimov's stories on robots have been my first introduction to robotics science fiction literature.
 Asimov's robots are bipeds resembling humans and programmed by the three laws of robotics.
@@ -73,7 +75,7 @@ Despite the safety feature provided by the three laws of robotics, Asimov often 
 3. A robot must protect its own existence as long as such protection does not conflict with the first or second law.
 
 While Asimov's robots worked within the parameters of the three laws, our current robots are mostly non-biped and are designed to perform continuous repetitive tasks.
-However, how would the three laws work if we were to create humanoid robots embedded with artificial intelligence (AI)?
+However, how would the three laws work if we created humanoid robots embedded with artificial intelligence (AI)?
 
 How do we embed the three laws in our robots? I have often asked myself this question. Lately, I have given some thought to it.
 This blog post will be less technical and more of an essay on the three laws of robotics and going down the metaphorical rabbit hole with some philosophical questions of a functioning three laws safe robot.
@@ -84,7 +86,7 @@ This blog post will be less technical and more of an essay on the three laws of 
 >A robot may not injure a human being or, through inaction, allow a human being to come to harm.
 {:class='blog-blockquote'}
 
-One of the fascinating parts I like about implementing these laws is how we convert these statements into something that a computer or a robot can understand.
+One of the fascinating parts of implementing these laws is converting these statements into something that a computer or a robot can understand.
 The first law statement raises questions such as, *What is an injury?*, *What does inaction mean?* and *How do we define harm?*
 But, the most crucial question, *How do we define a human being?*
 
@@ -103,7 +105,7 @@ if(human_is_at_harm):
     save_human()
 {% endhighlight %}
 
-I am sure saving a human being will not be as simple as the code mentioned above.
+I am sure saving a human being will not be as simple as the pseudocode mentioned above.
 Also, we completely ignore the robot kinematics, which relates to the motion of all the machine components in the robot joints that allow the robot to reach a particular location.
 This raises more questions than it answers. This is because we still think of robots with multiple actuators on their joints, allowing them to do more.
 *Human beings* do not have motors in our elbow. So, what if we invent a series of artificial fibres for a robot body capable of movement by electric currents.
@@ -119,7 +121,7 @@ This raises more questions than it answers. This is because we still think of ro
 I like this law as it provides a safety feature where a robot cannot be ordered to harm another *human being* because, according to the first law, a robot should not injure a *human being*.
 
 *How do we implement the second law?* We train the robot AI with speech recognition.
-We use natural language processing (NLP), where we train the AI to understand the speech and the context.
+We use natural language processing (NLP) to train the AI to understand the speech and the context.
 This will allow the robot AI to correctly comprehend the human order.
 The robot AI must be extensively trained so that a human does not trick a robot with unconventional commands, which would eventually cause harm to a human being.
 
@@ -139,7 +141,7 @@ def obey(human_order):
 {:class='blog-blockquote'}
 
 So, if you order the robot to destroy itself, the second law will accept the order to check if the order causes harm to the *human being* or to itself.
-If either condition is true, the robot will not execute any of the orders. This means the code in the Second law section must be modified.
+If either condition is true, the robot will not execute any orders. This means the code in the Second law section must be modified.
 
 {% highlight python %}
 
@@ -151,7 +153,7 @@ def obey(human_order):
 
 {% endhighlight %}
 
-But what if the robot seems the harm coming to itself. So, again, the robot must monitor the environment and process millions of images to identify a threat to the human and itself.
+But what if the robot sees the harm coming to itself. So, again, the robot must monitor the environment and process millions of images to identify a threat to the human and itself. In the case where a *human being* is about to be harmed, then according to the first law, the robot must save the *human being*. There is an Asimov story where a robot is stuck in a continuous loop where it sees a *human being* at harm, and saving that *human being* would involve the robot harming itself, which goes against the third law.
 
 ## The Zeroth Law
 
@@ -164,25 +166,28 @@ So, by the zeroth law, sacrificing few humans would be acceptable if the robots 
 
 *How do we implement the zeroth law?* I think we should let the robot's positronic brain develop this independently.
 
-## Some Final Thoughts
+## Some Concluding Thoughts
 ---
 
 In Asimov's stories, humans become very much reliant upon robots.
 *Human beings* do not go outside without having at least one of their robots with them.
-Robots have become a part of human life.
 This is not much different from our habits of carrying our smartphones with us.
 If we compare robots to smartphones, should each robot have a unique identity?
 When we buy a new smartphone, we enter our account credentials, and the new smartphone picks everything from the old smartphone backed up by a company's cloud storage.
-The new smartphone is new in physical form, but not new to know all that we want on our smartphones.
-Should robots be like these smartphones? They live with you while they back everything to the company's cloud that sells you the robot,
-or should robots be unique with their positronic brains saving experiences unique to them.
+The new smartphone still contains all our old data like contact details, applications, and photos.
+Should robots be like these smartphones?
+Should they live with you while they back everything to the company's cloud that provides you with the robot?
+Or should robots be unique machines with individual traits like a *human being*?
 
 We train AI by collecting data. The trained AI models are then updated to all our devices and smartphones.
-Should robots be trained in basic operations before they are dispatched? or should they be collectively trained by the data collected by each robot?
+Should robots be trained in basic operations before they are dispatched?
+Or should they be collectively trained by the data collected by each robot?
 Earlier, we tried to simplify the logic of the three laws of robotics.
-But, if we were to train a neural network of the robot's positronic brain, then it would be utterly unknown to us how the logic of the three laws exists in the robot's positronic brain.
+But, if we were to train a neural network on the robot's positronic brain, then it would be utterly unknown how the logic of the three laws exists in the robot's positronic brain.
 Our only assurance will be to experiment with different scenarios to check if the robot is three laws safe with the unknown logic.
-Once we have done enough experiments, we can copy the structure of the positronic brain to other robots.
+Once we have done enough experiments, we can certify the robot to be three laws safe.
+
+*What happens when a robot malfunctions?* Do the companies that provide robots collect the data relating to the malfunctions and patch the robot's software? Then, once the malfunction is fixed on one robot with a software update, should that software update be implemented in all the robots? This would be similar to the companies fixing bugs on software by updating the software via the internet. Imagine how expensive would it be if the companies had to recall their hardware back to the factory with every minor issue with the software.
 
 Asimov also introduced humaniform robots, which are exactly like humans in appearance.
 Eventually, their programming becomes so advanced that they define themselves as *human beings*.
@@ -192,10 +197,18 @@ Eventually, their programming becomes so advanced that they define themselves as
 ---
 
 This was a bit extensive essay/blog/whatever_this_is.
-I know that I am a bit naive in considering implementing the three laws.
+I know that I am a bit naive in predicting the implementation of the three laws.
 I can see the future version of me laughing over my naivety over this topic.
+I started with a story in this blog post because I have always found that stories helped me solidify learning and made me curious to learn more about a topic.
+
 There are several questions to answer when developing a humanoid robot.
-One question that I often avoid is: "WHY?"
-The mathematics involved in the kinematics of robotics is much more complex to explain in this blog.
-Also, I do not know the mathematics involved in programming the movement of a humanoid biped robot yet.
+While asking the engineering questions, we often forget the fundamental question, "why should we develop humanoid robots?"
+On the surface, I would answer this question on the likes of "We should develop humanoid robots which could help humanity become a multi-planetary species", or "Perhaps robots are the next evolutionary stage of sentient life-form".
+But, deep down, I think I have a simple answer, "We should develop humanoid robots because it is cool. It shows the ultimate advancement that humans are capable of achieving through collective efforts."
+
 If you, the reader, have made it this far in the blog, I am grateful to you for dedicating your time to reading some of my thoughts.
+
+## Image credit
+---
+
+Cover photo by <a href="https://unsplash.com/@aideal?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aideal Hwa</a> on <a href="https://unsplash.com/s/photos/science-fiction?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
