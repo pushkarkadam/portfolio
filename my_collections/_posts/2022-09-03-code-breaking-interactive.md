@@ -7,21 +7,19 @@ cover_image: 2021-12-14-cover.jpg
 author: Pushkar Kadam
 ---
 
-One cloudy afternoon, while walking down the street, I saw an object tossed out of a speeding car. It was a bag. I was curious to check the contents. The contents looked suspicious, so I quickly snapped some photographs. Little did I know that I was about to embark on a crazy mysterious adventure for the next three days with little to no sleep at all.
-
-Mysteries are always intriguing. So, I was thrilled when I found a 'stop a bank robbery' code-breaking challenge on Khan Academy. I have been learning maths from Khan Academy for a long time. Recently, I started learning about Cryptography and came across a fantastic code-breaking challenge. This blog outlines the process of decrypting secret messages with the help of a computer programming language called Python.
+One cloudy afternoon, while walking down the street, you see an object tossed out of a speeding car. It is a bag. You are curious to check the contents. The contents look suspicious, so you quickly snap some photographs. Little did you know that you were about to embark on a crazy mysterious adventure.
 
 <div class="alert alert-danger" role="alert">
     <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill"></i> Spoiler Alert!</h4>
     <p>Following this, there are going to be spoilers to the puzzles. So, if you want to solve this on your own, I highly recommend you to go to <a href="https://www.khanacademy.org/computing/computer-science/cryptography/cryptochallenge/a/cryptochallenge-introduction" class="alert-link" target="_blank">Khan Academy</a> to solve these puzzles</p>
     <hr>
-    <p class="mb-0">You may read ahead if you want to read a mystery blog and find out how to do cryptanalysis or are curious about code-breaking.</p>
+    <p class="mb-0">In this interactive version, there are plots to play around and solution is hidden under a toggle button. You may read ahead if you want to read a mystery blog and find out how to do cryptanalysis or are curious about code-breaking. </p>
 </div>
 
 ## Chapter 1: The discovery
 ---
 
-The contents from the bag thrown out of the car were mysterious. There were blueprints, a circuit diagram, a newspaper clipping, a business card with a hand-written 250 number.
+The contents from the bag thrown out of the car are mysterious. There is a blueprint, a circuit diagram, a newspaper clipping, a business card with a hand-written 250 number.
 
 ![bag far](/portfolio/assets/images/blogs/cryptography/bag_far.jpg){:class="img-fluid"}
 
@@ -39,19 +37,19 @@ The contents from the bag thrown out of the car were mysterious. There were blue
 
 ![angles](/portfolio/assets/images/blogs/cryptography/angles.jpg){:class="img-fluid"}
 
-But, one item stood out among the rest. It seemed like a secret code. After returning home, I heard the evening news that said:
+But, one item stands out among the rest. It seems like a secret code. After returning home, you hear the evening news that say:
 
 > Two thieves in their mid-20s are suspected to be in the area; they have been known to strike in neighbouring towns. Just earlier this week, the AMCO insurance office was burglarised and documents were stolen. Reward is being offered for information leading to their arrest...
 {:class="blog-blockquote"}
 
-I realised, to break this code, I must retrace their steps.
+You realise, to break this code, you must retrace their steps.
 
 ## Chapter 2: Caesar
 ---
 
-The business card looked promising. Luckily, I have a friend who works in Hudson Bay Lodge. I entered that dark hotel. My friend informed me that someone had checked into room 250 for three days. He gave me a copy of the key and told me that I only had two minutes to look.
+The business card looks promising. Luckily, you have a friend who works in Hudson Bay Lodge. You enter that dark hotel. Your friend informs you that someone had checked into room 250 for three days. He gives you a copy of the key and tells you that you only have two minutes to look.
 
-When I entered the room, I saw a wastebasket with some papers. Luckily, I found clue #1, two encrypted messages.
+When you enter the room, you see a wastebasket with some papers. Luckily, you find clue #1, two encrypted messages.
 
 ![message 1 and 2](/portfolio/assets/images/blogs/cryptography/message1_2.jpg){:class="img-fluid"}
 
@@ -77,7 +75,7 @@ ifkedqnbrxghflghrqldpvhw
 wlqjxsvdihkrxvhfr
 ```
 
-Before leaving the hotel, I noticed something else. It looked like an impression from another message. So, I scribbled with a pencil to reveal the hidden text underneath it. The text looked like another cypher.
+Before leaving the hotel, you noticed something else. It looked like an impression from another message. So, you scribbled with a pencil to reveal the hidden text underneath it. The text looked like another cypher.
 
 ![message 3](/portfolio/assets/images/blogs/cryptography/message3.jpg){:class="img-fluid"}
 
@@ -336,7 +334,7 @@ The frequency distribution of message 3, shown in *Fig. 6* do not follow a stand
 ## Chapter 3a: Holbein
 ---
 
-The first message from Caesar Cypher talked about `the hidden symbol of death in Holbein` and `switch to vigenere cipher`. I searched the Holbein on the internet, and after going through several images, one image struck out. The image was a famous painting by Holbein called The Ambassadors.  *Fig. 4* shows The Ambassadors by Hans Holbein the Younger.
+The first message from Caesar Cypher talked about `the hidden symbol of death in Holbein` and `switch to vigenere cipher`. You search the Holbein on the internet, and after going through several images, one image strikes out. The image is a famous painting by Holbein called The Ambassadors.  *Fig. 4* shows The Ambassadors by Hans Holbein the Younger.
 
 {% include image.html url="/portfolio/assets/images/blogs/cryptography/holbein.jpg" description="<strong>Fig. 4</strong>. The Ambassadors by Hans Holbein the Younger (Image credit: The National Gallery, UK)" %}
 
@@ -344,7 +342,7 @@ The first message from Caesar Cypher talked about `the hidden symbol of death in
 
 <div markdown="1" class="collapse" id="solution2a">
 
-The painting is of two gentlemen standing with many objects in the background. However, there was a weird image at the bottom of the painting. Initially, it seemed like a log of wood. But, upon seeing this image from a different perspective, as seen in *Fig. 5*, one notices a hidden skull. So, perhaps the word `skull` is the code word.
+The painting is of two gentlemen standing with many objects in the background. However, there was a weird image at the bottom of the painting. Initially, it seemed like a log of wood. But, upon seeing this image from a different perspective, as seen in *Fig. 5*, one notices a hidden skull. So, perhaps the word `skull` is the code word, since `skull` can be classified as `hidden symbol of death` from message 1.
 
 {% include image.html url="/portfolio/assets/images/blogs/cryptography/holbein_skull.jpg" description="<strong>Fig. 5</strong>. The anamorphic skull as restored in 1998, viewed here at an oblique angle from The Ambassadors by Hans Holbein the Younger (Image credit: The National Gallery, UK)" %}
 
@@ -361,15 +359,15 @@ s: wats onwatson
 e: yaed guardgqx
 ```
 
-So, we know which cypher to use and the code word. However, knowing the code word may not be enough to decrypt the message. We are lucky when we know the secret code word `skull`. But, we still get gibberish when we implement the code word `skull` to decrypt message 3. Therefore, knowing the code word is not enough; it is also essential to know the length of the code word.
-
-To find the length of the code word, we must find an information leak that often happens in long messages with repeating words. Since we are moving the same code word across the encrypted message, we start seeing peaks in the distribution after a few intervals.
+So, you know which cypher to use and the code word. However, knowing the code word may not be enough to decrypt the message. You are lucky when you know the secret code word. But, you still get gibberish when you implement the code word to decrypt message 3. Therefore, knowing the code word is not enough; it is also essential to know the length of the code word.
 
 <a class="btn btn-primary" data-toggle="collapse" href="#solution3">View Solution</a>
 
 <div markdown="1" class="collapse" id="solution3">
 
 ### Cracking the code
+
+To find the length of the code word, you must find an information leak that often happens in long messages with repeating words. Since you are moving the same code word across the encrypted message, you start seeing peaks in the distribution after a few intervals.
 
 We shift the message as follows and find the coincidences, i.e. the letters of the shifted message with one letter to the right that matches the original cyphertext. Following is an example of shifting the cyphertext.
 
@@ -512,7 +510,7 @@ The critical clue from message 3 is the `polybius squared rop message`.
 ## Chapter 4: Polybius
 ---
 
-After deciphering the first three messages, I took a stroll to the train station. But, I didn't see anything under the bench, as message 3 pointed out. But then, I glanced at a burnt paper close to the train tracks.
+After deciphering the first three messages, you take a stroll to the train station. But, you don't see anything under the bench, as message 3 pointed out. But then, you glance at a burnt paper close to the train tracks.
 
 ![message 4](/portfolio/assets/images/blogs/cryptography/polybius_message.jpg){:class="img-fluid"}
 
@@ -641,7 +639,7 @@ it combines our previous methods
 ## Chapter 5: Zeros and Ones
 ---
 
-Finally, after decoding the first four messages, I learned the safehouse's location and name ("blackout"). I approached the safehouse. There wasn't anyone around, so I entered the safehouse. It was a dark place. Luckily, I brought a flashlight and quickly snapped some images.
+Finally, after decoding the first four messages, you learn the safehouse's location and name ("blackout"). You approach the safehouse. There is no one around, so you enter the safehouse. It is a dark place. Luckily, you brought a flashlight and quickly snap some images.
 
 ![binary 1](/portfolio/assets/images/blogs/cryptography/binary1.jpg){:class="img-fluid"}
 
@@ -657,9 +655,11 @@ Finally, after decoding the first four messages, I learned the safehouse's locat
 
 ![compass](/portfolio/assets/images/blogs/cryptography/compass.jpg){:class="img-fluid"}
 
-It seems like the clues that I found in the safehouse has everything to do with the clues that I found from the bag. The clues from the safehouse provide steps to encrypt the message.
+It seems like the clues that you found in the safehouse has everything to do with the clues that you found from the bag. The clues from the safehouse provide steps to encrypt the message.
 
 {% include image.html url="/portfolio/assets/images/blogs/cryptography/angles.jpg" description="<strong>Fig. 8</strong>. Image of angles from the bag" %}
+
+Your first order of business is to decipher the angles.
 
 <a class="btn btn-primary" data-toggle="collapse" href="#angles">View Solution</a>
 
@@ -667,7 +667,7 @@ It seems like the clues that I found in the safehouse has everything to do with 
 
 ##### Angles
 
-My first order of business was to decipher the angles. One of the clues from the safehouse pages was about a compass. Also, every angle in the message has a cardinal direction (East, West, North, South) and an intermediate direction (North East, North West, South East, South West). Digging deeper into some pages, I realised that the angles follow a number system that limits up to the number `3`. So, I concluded that the angles are as follows:
+ One of the clues from the safehouse pages was about a compass. Also, every angle in the message has a cardinal direction (East, West, North, South) and an intermediate direction (North East, North West, South East, South West). Digging deeper into some pages, I realised that the angles follow a number system that limits up to the number `3`. So, I concluded that the angles are as follows:
 
 ```
     10 00 11
@@ -699,7 +699,7 @@ After decoding the compass angles, we can use the image found from the bag in *F
 1011 1010 0010 1100 1000 0011 1010 1011 1110 1011 0010 0010 1101 1000 1011 0111 1100 0010
 ```
 
-I had to decode the angles manually. So, there is a chance of misplacing a number. This misplacement could be a catastrophe.
+You must decode the angles manually. So, there is a chance of misplacing a number. This misplacement could be a catastrophe.
 
 We must combine the binary digits and eliminate all the white spaces as follows:
 
@@ -950,12 +950,12 @@ The word `tomorrow` is misspelt in the final message. This error is a good examp
 ## Epilogue
 ---
 
-I decrypted the secret code, and the police have accepted my information and now acting on it.
+You decrypted the secret code, and the police have accepted your information and now acting on it.
 
 ## Acknowledgement
 ---
 
-If it is still not obvious, let me clarify that the above story is fictitious, and any events mentioned above never happened. I am grateful to Khan Academy for this puzzle, which I recently learned, was released in 2014. All the images provided as clues are from Khan Academy, and they deserve full credit for those images.
+I am grateful to Khan Academy for this puzzle, which I recently learned, was released in 2014. All the images provided as clues are from Khan Academy, and they deserve full credit for those images.
 
 I accidentally stumbled upon this puzzle while learning cryptography. Some of the puzzles were very difficult for me. Thanks to Khan Academy, I recently learned about the frequency analysis of a message and its role in encryption. I learned several encryption techniques while doing this challenge that I did not know before. I would have been lost without some clues provided by the challenge and the community discussion in the comments.
 
@@ -966,6 +966,7 @@ This blog post is not sponsored by any organisations or companies mentioned here
 I published [this]({% post_url 2021-12-14-code-breaking %}) blog post last year from the code breaking challenge at Khan Academy which was developed to teach students about cryptography and code breaking.
 At the time, I did not know how to make interactive plots.
 But, I always had it in my mind to transform the plots into interactive version
+and keep the solution hidden
 so that the readers can get a better idea about the data and play around with it.
 
 Recently, I learned about [Plotly](https://plotly.com/python/) and how data scientists use this tool to make interactive plots to get better insights into the data.
