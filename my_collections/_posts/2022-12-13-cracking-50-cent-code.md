@@ -7,15 +7,15 @@ cover_image: 2022-12-13-cover.png
 author: Pushkar Kadam
 ---
 
-Few months ago, while discussing about cryptography, my
+A few months ago, while discussing about cryptography (the art of writing or solving codes), my
 friend told me about the 75th Anniversary Commemorative Coin.
 This limited edition fifty cent coin was released on 1 September 2022 by
 Australian Mint to celebrate the 75th anniversary of the Australian Signals Directorate (ASD).
 The specialty of this coin is that there are several
 cryptography puzzles minted on this coin.
 
-This blog consists of solutions to the puzzle using
-Python programming language.
+This blog post aims to explain the methods to crack the codes using
+the Python programming language.
 If you do not code and are simply interested in the code-breaking
 process, I plan to explain how the puzzles can also be
 solved manually.
@@ -23,7 +23,7 @@ solved manually.
 
 <div class="alert alert-danger" role="alert">
     <h4 class="alert-heading"><i class="bi bi-exclamation-triangle-fill"></i> Spoiler Alert!</h4>
-    <p>Following this, there are going to be spoilers to the puzzles. So, if you want to solve this on your own, I highly recommend you to go to <a href="https://www.asd.gov.au/75th-anniversary/events/2022-09-01-75th-anniversary-commemorative-coin" class="alert-link" target="_blank">ASD</a> to solve these puzzles</p>
+    <p>Following this, there are going to be spoilers to the puzzles. So, if you want to solve this on your own, I highly recommend you to go to <a href="https://www.asd.gov.au/75th-anniversary/events/2022-09-01-75th-anniversary-commemorative-coin" class="alert-link" target="_blank">ASD</a>'s website to solve these puzzles.</p>
 </div>
 
 
@@ -36,7 +36,7 @@ When we look at the Queen's head on the coin, the following letters have a
 series of dots shown below them. 
 It seems obvious that these dots signify Braille 
 characters used by visually impaired people to read by sensing
-the bulge of the dots on a surface.
+the embossed dots on a surface.
 
 The Braille characters use a `3 x 2` (3 rows, 2 columns) grid sytem:
 * `1-2` (top row)
@@ -54,7 +54,7 @@ The Braille characters use a `3 x 2` (3 rows, 2 columns) grid sytem:
 ```
 
 Based on the grid system mentioned-above, the following
-letters consist the dots underneath.
+letters on the coin consist the dots underneath.
 
 ```
 B 1 2
@@ -127,7 +127,7 @@ The text from the outer ring is as follows:
 Solving level one of the puzzle gives us the clue: `ATBASH`.
 
 **ATBASH** is a monoalphabetic substitution cipher.
-This cipher was originally used to encrypt the Hebrew alphabet.
+This cipher was originally used to encrypt the Hebrew alphabets.
 This cipher system can be modified to any writing system
 where the alphabets/characters are in standard order.
 
@@ -144,7 +144,7 @@ The decryption involves matching the cipher text characters
 to the plain text characters from the map mentioned above.
 
 The decryption can be done manually, but if you have a large text to decrypt, it is better to take help of a computer.
-Following is the python code to decrypt the message.
+Following is the Python code to decrypt the message.
 
 {% highlight python linenos %}
 import re
@@ -214,13 +214,15 @@ The text on the inner ring of the coin is as follows:
 `BGOAMVOEIATSIRLNGTTNEOGRERGXNTEAIFCECAIEOALEKFNR5LWEFCHDEEAEEE7NMDRXX5`
 
 Solving level two gave us the clue: `7 WIDTH X 5 DEPTH`.
-This is familiar to using transposition cipher.
-
+This clue suggests a dimension.
+Transposition ciphers are based on organising
+the text in a grid/matrix of a certain dimension.
 In transposition cipher, the decryption process is performed
 by organising the decrypted text in a grid.
+
 Consider the following example where the key `(4 x 5)`
-indicates that we must write down `5` columns starting a new
-column after every `4` letters. Then go through each row
+indicates that we must write `5` columns starting a new
+column after every `4` letters. Then, sequentially go through each row
 of the grid to get the plain text.
 
 ```
@@ -403,16 +405,16 @@ the result to a decimal number.
 ```
 
 The first decimal number obtained by matching the
-hexadecimal number on the coin with the hexadecimal string
+hexadecimal number on the coin with the hexadecimal key
 gives `70`.
 
 `ASCII` (American Standard Code for Information Interchange) 
 is a 7-bit character code where every single bit represents
 a unique character.
-Comparing the number `70` obtained from the `xor` calculation,
-we get the character `F`.
+Tracking the number `70` on the `ASCII` table, we get the 
+character `F` corresponding to `70`.
 
-This `xor` decryption is a tedious process and I would recommend using
+This `XOR` decryption is a tedious process and I would recommend using
 a computer to solve this puzzle.
 Using the following Python code, we can solve this puzzle.
 
@@ -517,15 +519,16 @@ I had fun in solving these puzzles.
 I appreciate the thoughts and efforts that went into
 creating these fun puzzles and minting them on a 50 cent coin.
 
-Full disclosure: I did not figure out the methods to solve
+Full disclosure, I did not figure out the methods to solve
 these puzzles. I looked up the hints on the ASD's website and developed simple programmes
 in Python to get the results.
 Comparing my results with the results published on ASD's website was still a joyful experience.
 
-I also learned that there is a bonus level (solution not mentioned in this blog). If you are interested in cracking the bonus level code, head to [ASD](https://www.asd.gov.au/75th-anniversary/events/2022-09-01-75th-anniversary-commemorative-coin){:target="_blank"}'s website and try it out.
+There is also a bonus level puzzle on this coin (solution not mentioned in this blog). If you are interested in cracking the bonus level code, head to [ASD](https://www.asd.gov.au/75th-anniversary/events/2022-09-01-75th-anniversary-commemorative-coin){:target="_blank"}'s website and try it out.
 If you are simply curious and do not want to try cracking
-the codes, ASD has published methods and solutions
-to crack the codes.
+the codes, then you can still check out the methods
+and solutions to these puzzles and enjoy the code-breaking
+experience.
 
 ### Image Credits
 ---
