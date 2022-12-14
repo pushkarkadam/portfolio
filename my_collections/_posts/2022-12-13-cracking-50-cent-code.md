@@ -81,9 +81,9 @@ decimal numbers as follows:
 +----+----+----+----+----+----+
 ```
 
-Sorting the characters in the ascending order of their decimal value, we get `ATBASH`.
+Sorting the characters in the ascending order of their decimal values, we get `ATBASH`.
 
-For those who want to use Python code to solve this, refer the following code:
+Following is the python code to solve this:
 
 {% highlight python linenos %}
 secret_dict = {'B': 3, 
@@ -235,7 +235,7 @@ HYEND
 Plain: ILOVECRYPTOGRAPHYEND
 ```
 
-Again, you can manually solve the puzzle by simply rearranging 
+You can manually solve the puzzle by simply rearranging 
 the letters in a `7 x 5` grid and create multiple grids when 
 the `7` width runs.
 Then continue to read the message by following each row.
@@ -412,7 +412,7 @@ a unique character.
 Comparing the number `70` obtained from the `xor` calculation,
 we get the character `F`.
 
-This xor decryption is a tedious process and I would recommend using
+This `xor` decryption is a tedious process and I would recommend using
 a computer to solve this puzzle.
 Using the following Python code, we can solve this puzzle.
 
@@ -517,14 +517,14 @@ I had fun in solving these puzzles.
 I appreciate the thoughts and efforts that went into
 creating these fun puzzles and minting them on a 50 cent coin.
 
-Full disclosure, I did not figure out the methods to solve
+Full disclosure: I did not figure out the methods to solve
 these puzzles. I looked up the hints on the ASD's website and developed simple programmes
 in Python to get the results.
 Comparing my results with the results published on ASD's website was still a joyful experience.
 
-I also learned that there is a bonus level. If you are interested in cracking the bonus level code, head to [ASD](https://www.asd.gov.au/75th-anniversary/events/2022-09-01-75th-anniversary-commemorative-coin){:target="_blank"}'s website and try it out.
+I also learned that there is a bonus level (solution not mentioned in this blog). If you are interested in cracking the bonus level code, head to [ASD](https://www.asd.gov.au/75th-anniversary/events/2022-09-01-75th-anniversary-commemorative-coin){:target="_blank"}'s website and try it out.
 If you are simply curious and do not want to try cracking
-the code, ASD has published methods and solutions
+the codes, ASD has published methods and solutions
 to crack the codes.
 
 ### Image Credits
