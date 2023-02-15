@@ -2,7 +2,7 @@
 layout: post
 title:  "Tracking Every Fifteen Minutes for a Year"
 date:   2023-02-06 01:00:00 +1100
-categories: [coding]
+categories: [essay, coding]
 cover_image: 2023-02-06-cover.png
 author: Pushkar Kadam
 excerpt: I tracked everything I did for a year in fifteen minutes increment. Then, I visualised the data.
