@@ -2,8 +2,8 @@
 layout: post
 title:  "Tracking Every Fifteen Minutes for a Year"
 date:   2023-02-06 01:00:00 +1100
-categories: [essay]
-cover_image: 2021-10-08-cover.jpg
+categories: [coding]
+cover_image: 2023-02-06-cover.png
 author: Pushkar Kadam
 excerpt: I tracked everything I did for a year in fifteen minutes increment. Then, I visualised the data.
 ---
@@ -31,11 +31,9 @@ I had one simple rule for this experiment:
 ## The System
 ---
 
-![Data](/portfolio/assets/images/blogs/2023-02-06-cover.png){:class="img-fluid"}
-
 I used Google Sheets to input data.
 Every row was a day and every column was the time in fifteen minutes
-interval.
+interval (Check the cover photo of this post).
 I used conditional formatting to highlight the cells with colour for the
 designated activities.
 Another sheet tab was used to monitor the total activities in real-time
