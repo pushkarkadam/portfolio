@@ -5,6 +5,10 @@ date:   2023-02-06 01:00:00 +1100
 categories: [coding]
 cover_image: 2023-02-06-cover.png
 author: Pushkar Kadam
+excerpt: The year 2022 was the year of data for me.
+I started the year by completing the Google Data Analytics course,
+a new job as an Assistant Data Scientist,
+and tracking everything I did in my life for a year in fifteen minutes increment.
 ---
 
 The year 2022 was the year of data for me.
