@@ -13,6 +13,8 @@ collections:
         output: true
     categories:
         output: true
+    publications:
+        output: true
 
 defaults:
     - scope:
